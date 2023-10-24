@@ -1,12 +1,12 @@
 #![allow(clippy::derive_partial_eq_without_eq)]
 
 use itertools::Itertools;
-use std::cell::OnceCell;
 
 use std::fmt;
 use std::fmt::Debug;
 use std::ops::Deref;
 use std::slice::{Iter, IterMut};
+use std::sync::OnceLock;
 
 use ruff_text_size::{Ranged, TextRange, TextSize};
 
@@ -1264,7 +1264,7 @@ impl StringLiteralValue {
         Self {
             inner: StringLiteralValueInner::Concatenated(ConcatenatedStringLiteral {
                 strings,
-                value: OnceCell::new(),
+                value: OnceLock::new(),
             }),
         }
     }
@@ -1431,7 +1431,7 @@ struct ConcatenatedStringLiteral {
     /// Each string literal that makes up the concatenated string.
     strings: Vec<StringLiteral>,
     /// The concatenated string value.
-    value: OnceCell<String>,
+    value: OnceLock<String>,
 }
 
 impl ConcatenatedStringLiteral {
@@ -3881,7 +3881,7 @@ mod size_assertions {
     assert_eq_size!(FunctionDefStmt, [u8; 144]);
     assert_eq_size!(ClassDefStmt, [u8; 104]);
     assert_eq_size!(TryStmt, [u8; 112]);
-    assert_eq_size!(Expr, [u8; 80]);
-    assert_eq_size!(Pattern, [u8; 96]);
+    assert_eq_size!(Expr, [u8; 72]);
+    assert_eq_size!(Pattern, [u8; 88]);
     assert_eq_size!(Mod, [u8; 32]);
 }

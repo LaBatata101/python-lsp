@@ -1,5 +1,5 @@
 [package]
-name = "python-parser"
+name = "python-lsp"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,7 +7,7 @@ edition = "2021"
 
 [workspace]
 members = ["crates/ruff_text_size", "crates/ruff_source_file", "crates/ruff_macros", "crates/ruff_index",
-"crates/python_ast", "crates/python_parser"]
+"crates/python_ast", "crates/python_parser", "crates/ruff_benchmark"]
 
 [dependencies]
 bitflags = "1.3.2"
@@ -20,6 +20,13 @@ python_ast = { path = "crates/python_ast", package = "python_ast" }
 python_parser = { path = "crates/python_parser", package = "python_parser" }
 unicode-ident = "1.0.11"
 itertools = "0.11.0"
+tokio = { version = "1.32.0", features = ["full"] }
+tower-lsp = { version = "0.20.0", features = ["proposed"] }
+ropey = "1.6.0"
+dashmap = "5.5.3"
+ouroboros = "0.18.0"
+memchr = "2.6.4"
+smallvec = "1.11.2"
 
 [dev-dependencies]
 insta = { version = "1.31.0", features = ["yaml"] }
