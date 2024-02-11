@@ -1,0 +1,45 @@
+---
+source: crates/python_parser/src/parser/tests/invalid_assignments.rs
+expression: ast
+---
+(
+    [
+        Assign(
+            AssignStmt {
+                range: 0..9,
+                targets: [
+                    Subscript(
+                        SubscriptExpr {
+                            range: 0..4,
+                            value: Name(
+                                NameExpr {
+                                    range: 0..1,
+                                    id: "x",
+                                    ctx: Load,
+                                },
+                            ),
+                            slice: NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 2..3,
+                                    value: Int(
+                                        0,
+                                    ),
+                                },
+                            ),
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 7..9,
+                        value: Int(
+                            42,
+                        ),
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

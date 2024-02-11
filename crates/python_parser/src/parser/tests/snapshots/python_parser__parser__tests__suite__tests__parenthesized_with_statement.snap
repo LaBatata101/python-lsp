@@ -1,0 +1,679 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_suite(source)
+---
+(
+    [
+        With(
+            WithStmt {
+                range: 0..21,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 6..9,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 7..8,
+                                id: "a",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                    WithItem {
+                        range: 11..14,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 12..13,
+                                id: "b",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 17..21,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 22..56,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 28..31,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 29..30,
+                                id: "a",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                    WithItem {
+                        range: 33..36,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 34..35,
+                                id: "b",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                    WithItem {
+                        range: 38..44,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 38..39,
+                                id: "c",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 43..44,
+                                    id: "d",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                    WithItem {
+                        range: 46..49,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 47..48,
+                                id: "e",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 52..56,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 57..74,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 63..64,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 63..64,
+                                id: "a",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                    WithItem {
+                        range: 66..67,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 66..67,
+                                id: "b",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 70..74,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 75..97,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 80..91,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 81..85,
+                                elts: [
+                                    Name(
+                                        NameExpr {
+                                            range: 81..82,
+                                            id: "a",
+                                            ctx: Load,
+                                        },
+                                    ),
+                                    Name(
+                                        NameExpr {
+                                            range: 84..85,
+                                            id: "b",
+                                            ctx: Load,
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 90..91,
+                                    id: "c",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 93..97,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 98..122,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 104..115,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 105..109,
+                                elts: [
+                                    Name(
+                                        NameExpr {
+                                            range: 105..106,
+                                            id: "a",
+                                            ctx: Load,
+                                        },
+                                    ),
+                                    Name(
+                                        NameExpr {
+                                            range: 108..109,
+                                            id: "b",
+                                            ctx: Load,
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 114..115,
+                                    id: "c",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 118..122,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 123..142,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 129..135,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 129..130,
+                                id: "a",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 134..135,
+                                    id: "b",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 138..142,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 143..157,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 149..150,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 149..150,
+                                id: "a",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 153..157,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 158..177,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 164..170,
+                        context_expr: NamedExpr(
+                            NamedExpr {
+                                range: 164..170,
+                                target: Name(
+                                    NameExpr {
+                                        range: 164..165,
+                                        id: "a",
+                                        ctx: Store,
+                                    },
+                                ),
+                                value: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 169..170,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 173..177,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 178..202,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 183..196,
+                        context_expr: NamedExpr(
+                            NamedExpr {
+                                range: 184..190,
+                                target: Name(
+                                    NameExpr {
+                                        range: 184..185,
+                                        id: "a",
+                                        ctx: Store,
+                                    },
+                                ),
+                                value: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 189..190,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 195..196,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 198..202,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 203..219,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 209..212,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 210..211,
+                                id: "a",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 215..219,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 220..241,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 226..234,
+                        context_expr: NamedExpr(
+                            NamedExpr {
+                                range: 227..233,
+                                target: Name(
+                                    NameExpr {
+                                        range: 227..228,
+                                        id: "a",
+                                        ctx: Store,
+                                    },
+                                ),
+                                value: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 232..233,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 237..241,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 242..271,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 248..254,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 248..249,
+                                id: "a",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 253..254,
+                                    id: "b",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                    WithItem {
+                        range: 256..264,
+                        context_expr: NamedExpr(
+                            NamedExpr {
+                                range: 257..263,
+                                target: Name(
+                                    NameExpr {
+                                        range: 257..258,
+                                        id: "a",
+                                        ctx: Store,
+                                    },
+                                ),
+                                value: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 262..263,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 267..271,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 272..296,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 278..279,
+                        context_expr: Name(
+                            NameExpr {
+                                range: 278..279,
+                                id: "a",
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                    WithItem {
+                        range: 281..289,
+                        context_expr: NamedExpr(
+                            NamedExpr {
+                                range: 282..288,
+                                target: Name(
+                                    NameExpr {
+                                        range: 282..283,
+                                        id: "a",
+                                        ctx: Store,
+                                    },
+                                ),
+                                value: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 287..288,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 292..296,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 297..315,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 303..308,
+                        context_expr: Yield(
+                            YieldExpr {
+                                range: 303..308,
+                                value: None,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 311..315,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 316..341,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 322..334,
+                        context_expr: YieldFrom(
+                            YieldFromExpr {
+                                range: 322..334,
+                                value: Name(
+                                    NameExpr {
+                                        range: 333..334,
+                                        id: "a",
+                                        ctx: Load,
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 337..341,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 342..362,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 348..355,
+                        context_expr: Yield(
+                            YieldExpr {
+                                range: 349..354,
+                                value: None,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 358..362,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 363..390,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 369..383,
+                        context_expr: YieldFrom(
+                            YieldFromExpr {
+                                range: 370..382,
+                                value: Name(
+                                    NameExpr {
+                                        range: 381..382,
+                                        id: "a",
+                                        ctx: Load,
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 386..390,
+                        },
+                    ),
+                ],
+            },
+        ),
+    ],
+    [],
+)

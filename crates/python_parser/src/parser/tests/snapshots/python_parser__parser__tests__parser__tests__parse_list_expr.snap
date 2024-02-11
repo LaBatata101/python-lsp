@@ -1,0 +1,356 @@
+---
+source: crates/python_parser/src/parser/tests/parser.rs
+expression: "parse(\"\n[1 + i, [1, 2, 3, 4], (a, i + x, y), {a, b, c}, {a: 1}]\n[1, 2, 3]\n[]\n[1]\n[f(g(attr.H()) for c in l)]\n\")"
+---
+ParsedFile {
+    ast: Module(
+        ModModule {
+            range: 0..102,
+            body: [
+                Expr(
+                    ExprStmt {
+                        range: 1..56,
+                        value: List(
+                            ListExpr {
+                                range: 1..56,
+                                elts: [
+                                    BinOp(
+                                        BinOpExpr {
+                                            range: 2..7,
+                                            left: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 2..3,
+                                                    value: Int(
+                                                        1,
+                                                    ),
+                                                },
+                                            ),
+                                            op: Add,
+                                            right: Name(
+                                                NameExpr {
+                                                    range: 6..7,
+                                                    id: "i",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                    List(
+                                        ListExpr {
+                                            range: 9..21,
+                                            elts: [
+                                                NumberLiteral(
+                                                    NumberLiteralExpr {
+                                                        range: 10..11,
+                                                        value: Int(
+                                                            1,
+                                                        ),
+                                                    },
+                                                ),
+                                                NumberLiteral(
+                                                    NumberLiteralExpr {
+                                                        range: 13..14,
+                                                        value: Int(
+                                                            2,
+                                                        ),
+                                                    },
+                                                ),
+                                                NumberLiteral(
+                                                    NumberLiteralExpr {
+                                                        range: 16..17,
+                                                        value: Int(
+                                                            3,
+                                                        ),
+                                                    },
+                                                ),
+                                                NumberLiteral(
+                                                    NumberLiteralExpr {
+                                                        range: 19..20,
+                                                        value: Int(
+                                                            4,
+                                                        ),
+                                                    },
+                                                ),
+                                            ],
+                                            ctx: Load,
+                                        },
+                                    ),
+                                    Tuple(
+                                        TupleExpr {
+                                            range: 23..36,
+                                            elts: [
+                                                Name(
+                                                    NameExpr {
+                                                        range: 24..25,
+                                                        id: "a",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                BinOp(
+                                                    BinOpExpr {
+                                                        range: 27..32,
+                                                        left: Name(
+                                                            NameExpr {
+                                                                range: 27..28,
+                                                                id: "i",
+                                                                ctx: Load,
+                                                            },
+                                                        ),
+                                                        op: Add,
+                                                        right: Name(
+                                                            NameExpr {
+                                                                range: 31..32,
+                                                                id: "x",
+                                                                ctx: Load,
+                                                            },
+                                                        ),
+                                                    },
+                                                ),
+                                                Name(
+                                                    NameExpr {
+                                                        range: 34..35,
+                                                        id: "y",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                            ],
+                                            ctx: Load,
+                                        },
+                                    ),
+                                    Set(
+                                        SetExpr {
+                                            range: 38..47,
+                                            elts: [
+                                                Name(
+                                                    NameExpr {
+                                                        range: 39..40,
+                                                        id: "a",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                Name(
+                                                    NameExpr {
+                                                        range: 42..43,
+                                                        id: "b",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                Name(
+                                                    NameExpr {
+                                                        range: 45..46,
+                                                        id: "c",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                            ],
+                                        },
+                                    ),
+                                    Dict(
+                                        DictExpr {
+                                            range: 49..55,
+                                            keys: [
+                                                Some(
+                                                    Name(
+                                                        NameExpr {
+                                                            range: 50..51,
+                                                            id: "a",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                ),
+                                            ],
+                                            values: [
+                                                NumberLiteral(
+                                                    NumberLiteralExpr {
+                                                        range: 53..54,
+                                                        value: Int(
+                                                            1,
+                                                        ),
+                                                    },
+                                                ),
+                                            ],
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 57..66,
+                        value: List(
+                            ListExpr {
+                                range: 57..66,
+                                elts: [
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 58..59,
+                                            value: Int(
+                                                1,
+                                            ),
+                                        },
+                                    ),
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 61..62,
+                                            value: Int(
+                                                2,
+                                            ),
+                                        },
+                                    ),
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 64..65,
+                                            value: Int(
+                                                3,
+                                            ),
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 67..69,
+                        value: List(
+                            ListExpr {
+                                range: 67..69,
+                                elts: [],
+                                ctx: Load,
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 70..73,
+                        value: List(
+                            ListExpr {
+                                range: 70..73,
+                                elts: [
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 71..72,
+                                            value: Int(
+                                                1,
+                                            ),
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 74..101,
+                        value: List(
+                            ListExpr {
+                                range: 74..101,
+                                elts: [
+                                    Call(
+                                        CallExpr {
+                                            range: 75..100,
+                                            func: Name(
+                                                NameExpr {
+                                                    range: 75..76,
+                                                    id: "f",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                            arguments: Arguments {
+                                                range: 76..100,
+                                                args: [
+                                                    GeneratorExp(
+                                                        GeneratorExpExpr {
+                                                            range: 77..99,
+                                                            elt: Call(
+                                                                CallExpr {
+                                                                    range: 77..88,
+                                                                    func: Name(
+                                                                        NameExpr {
+                                                                            range: 77..78,
+                                                                            id: "g",
+                                                                            ctx: Load,
+                                                                        },
+                                                                    ),
+                                                                    arguments: Arguments {
+                                                                        range: 78..88,
+                                                                        args: [
+                                                                            Call(
+                                                                                CallExpr {
+                                                                                    range: 79..87,
+                                                                                    func: Attribute(
+                                                                                        AttributeExpr {
+                                                                                            range: 79..85,
+                                                                                            value: Name(
+                                                                                                NameExpr {
+                                                                                                    range: 79..83,
+                                                                                                    id: "attr",
+                                                                                                    ctx: Load,
+                                                                                                },
+                                                                                            ),
+                                                                                            attr: Identifier {
+                                                                                                id: "H",
+                                                                                                range: 84..85,
+                                                                                            },
+                                                                                            ctx: Load,
+                                                                                        },
+                                                                                    ),
+                                                                                    arguments: Arguments {
+                                                                                        range: 85..87,
+                                                                                        args: [],
+                                                                                        keywords: [],
+                                                                                    },
+                                                                                },
+                                                                            ),
+                                                                        ],
+                                                                        keywords: [],
+                                                                    },
+                                                                },
+                                                            ),
+                                                            generators: [
+                                                                Comprehension {
+                                                                    range: 89..99,
+                                                                    target: Name(
+                                                                        NameExpr {
+                                                                            range: 93..94,
+                                                                            id: "c",
+                                                                            ctx: Store,
+                                                                        },
+                                                                    ),
+                                                                    iter: Name(
+                                                                        NameExpr {
+                                                                            range: 98..99,
+                                                                            id: "l",
+                                                                            ctx: Load,
+                                                                        },
+                                                                    ),
+                                                                    ifs: [],
+                                                                    is_async: false,
+                                                                },
+                                                            ],
+                                                        },
+                                                    ),
+                                                ],
+                                                keywords: [],
+                                            },
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                    },
+                ),
+            ],
+        },
+    ),
+    parse_errors: [],
+}

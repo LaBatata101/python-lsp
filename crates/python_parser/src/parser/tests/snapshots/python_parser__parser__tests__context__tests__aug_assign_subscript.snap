@@ -1,0 +1,67 @@
+---
+source: crates/python_parser/src/parser/tests/context.rs
+expression: parse_ast
+---
+(
+    [
+        AugAssign(
+            AugAssignStmt {
+                range: 0..17,
+                target: Subscript(
+                    SubscriptExpr {
+                        range: 0..4,
+                        value: Name(
+                            NameExpr {
+                                range: 0..1,
+                                id: "x",
+                                ctx: Load,
+                            },
+                        ),
+                        slice: Name(
+                            NameExpr {
+                                range: 2..3,
+                                id: "y",
+                                ctx: Load,
+                            },
+                        ),
+                        ctx: Store,
+                    },
+                ),
+                op: Add,
+                value: Tuple(
+                    TupleExpr {
+                        range: 8..17,
+                        elts: [
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 9..10,
+                                    value: Int(
+                                        1,
+                                    ),
+                                },
+                            ),
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 12..13,
+                                    value: Int(
+                                        2,
+                                    ),
+                                },
+                            ),
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 15..16,
+                                    value: Int(
+                                        3,
+                                    ),
+                                },
+                            ),
+                        ],
+                        ctx: Load,
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

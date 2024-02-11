@@ -1,0 +1,26 @@
+---
+source: crates/python_parser/src/string.rs
+expression: "parse_suite(r#\"f\"\"\"#).0"
+---
+[
+    Expr(
+        ExprStmt {
+            range: 0..3,
+            value: FString(
+                FStringExpr {
+                    range: 0..3,
+                    value: FStringValue {
+                        inner: Single(
+                            FString(
+                                FString {
+                                    range: 0..3,
+                                    elements: [],
+                                },
+                            ),
+                        ),
+                    },
+                },
+            ),
+        },
+    ),
+]

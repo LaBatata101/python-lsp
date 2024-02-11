@@ -1,8 +1,0 @@
----
-source: src/lexer/mod.rs
-expression: "LexerDebug::new(&lexer, &source)"
----
-[
-    "\"abc\\\rdef\"" String { kind: String, is_triple_quote: false } 0..10,
-    "" NewLine 10..10,
-]

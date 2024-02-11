@@ -1,0 +1,113 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    Tuple(
+        TupleExpr {
+            range: 0..134,
+            elts: [
+                IfExp(
+                    IfExpr {
+                        range: 0..132,
+                        test: Name(
+                            NameExpr {
+                                range: 116..122,
+                                id: "offset",
+                                ctx: Load,
+                            },
+                        ),
+                        body: Call(
+                            CallExpr {
+                                range: 0..18,
+                                func: Attribute(
+                                    AttributeExpr {
+                                        range: 0..8,
+                                        value: StringLiteral(
+                                            StringLiteralExpr {
+                                                range: 0..3,
+                                                value: StringLiteralValue {
+                                                    inner: Single(
+                                                        StringLiteral {
+                                                            range: 0..3,
+                                                            value: " ",
+                                                            unicode: false,
+                                                        },
+                                                    ),
+                                                },
+                                            },
+                                        ),
+                                        attr: Identifier {
+                                            id: "join",
+                                            range: 4..8,
+                                        },
+                                        ctx: Load,
+                                    },
+                                ),
+                                arguments: Arguments {
+                                    range: 8..18,
+                                    args: [
+                                        Name(
+                                            NameExpr {
+                                                range: 14..17,
+                                                id: "sql",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                    ],
+                                    keywords: [],
+                                },
+                            },
+                        ),
+                        orelse: NoneLiteral(
+                            NoneLiteralExpr {
+                                range: 128..132,
+                            },
+                        ),
+                    },
+                ),
+                Invalid(
+                    InvalidExpr {
+                        value: "\n",
+                        range: 133..134,
+                    },
+                ),
+            ],
+            ctx: Load,
+        },
+    ),
+    [
+        ParseError {
+            error: OtherError(
+                "unexpected token `NonLogicalNewline`",
+            ),
+            location: 14..17,
+        },
+        ParseError {
+            error: ExpectedToken {
+                expected: Rpar,
+                found: NonLogicalNewline,
+            },
+            location: 17..18,
+        },
+        ParseError {
+            error: OtherError(
+                "unexpected tokens",
+            ),
+            location: 17..111,
+        },
+        ParseError {
+            error: OtherError(
+                "unexpected token `NonLogicalNewline`",
+            ),
+            location: 133..134,
+        },
+        ParseError {
+            error: ExpectedToken {
+                expected: EndOfFile,
+                found: Rpar,
+            },
+            location: 138..139,
+        },
+    ],
+)

@@ -1,0 +1,361 @@
+---
+source: crates/python_parser/src/parser/tests/parser.rs
+expression: "parse(\"\nawait x\nawait x + 1\nawait a and b\nawait f()\nawait [1, 2]\nawait {3, 4}\nawait {i: 5}\nawait 7, 8\nawait (9, 10)\nawait 1 == 1\nawait x if True else None\n\")"
+---
+ParsedFile {
+    ast: Module(
+        ModModule {
+            range: 0..148,
+            body: [
+                Expr(
+                    ExprStmt {
+                        range: 1..8,
+                        value: Await(
+                            AwaitExpr {
+                                range: 1..8,
+                                value: Name(
+                                    NameExpr {
+                                        range: 7..8,
+                                        id: "x",
+                                        ctx: Load,
+                                    },
+                                ),
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 9..20,
+                        value: BinOp(
+                            BinOpExpr {
+                                range: 9..20,
+                                left: Await(
+                                    AwaitExpr {
+                                        range: 9..16,
+                                        value: Name(
+                                            NameExpr {
+                                                range: 15..16,
+                                                id: "x",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                    },
+                                ),
+                                op: Add,
+                                right: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 19..20,
+                                        value: Int(
+                                            1,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 21..34,
+                        value: BoolOp(
+                            BoolOpExpr {
+                                range: 21..34,
+                                op: And,
+                                values: [
+                                    Await(
+                                        AwaitExpr {
+                                            range: 21..28,
+                                            value: Name(
+                                                NameExpr {
+                                                    range: 27..28,
+                                                    id: "a",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                    Name(
+                                        NameExpr {
+                                            range: 33..34,
+                                            id: "b",
+                                            ctx: Load,
+                                        },
+                                    ),
+                                ],
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 35..44,
+                        value: Await(
+                            AwaitExpr {
+                                range: 35..44,
+                                value: Call(
+                                    CallExpr {
+                                        range: 41..44,
+                                        func: Name(
+                                            NameExpr {
+                                                range: 41..42,
+                                                id: "f",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                        arguments: Arguments {
+                                            range: 42..44,
+                                            args: [],
+                                            keywords: [],
+                                        },
+                                    },
+                                ),
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 45..57,
+                        value: Await(
+                            AwaitExpr {
+                                range: 45..57,
+                                value: List(
+                                    ListExpr {
+                                        range: 51..57,
+                                        elts: [
+                                            NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 52..53,
+                                                    value: Int(
+                                                        1,
+                                                    ),
+                                                },
+                                            ),
+                                            NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 55..56,
+                                                    value: Int(
+                                                        2,
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                        ctx: Load,
+                                    },
+                                ),
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 58..70,
+                        value: Await(
+                            AwaitExpr {
+                                range: 58..70,
+                                value: Set(
+                                    SetExpr {
+                                        range: 64..70,
+                                        elts: [
+                                            NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 65..66,
+                                                    value: Int(
+                                                        3,
+                                                    ),
+                                                },
+                                            ),
+                                            NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 68..69,
+                                                    value: Int(
+                                                        4,
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 71..83,
+                        value: Await(
+                            AwaitExpr {
+                                range: 71..83,
+                                value: Dict(
+                                    DictExpr {
+                                        range: 77..83,
+                                        keys: [
+                                            Some(
+                                                Name(
+                                                    NameExpr {
+                                                        range: 78..79,
+                                                        id: "i",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                            ),
+                                        ],
+                                        values: [
+                                            NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 81..82,
+                                                    value: Int(
+                                                        5,
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 84..94,
+                        value: Tuple(
+                            TupleExpr {
+                                range: 84..94,
+                                elts: [
+                                    Await(
+                                        AwaitExpr {
+                                            range: 84..91,
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 90..91,
+                                                    value: Int(
+                                                        7,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 93..94,
+                                            value: Int(
+                                                8,
+                                            ),
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 95..108,
+                        value: Await(
+                            AwaitExpr {
+                                range: 95..108,
+                                value: Tuple(
+                                    TupleExpr {
+                                        range: 101..108,
+                                        elts: [
+                                            NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 102..103,
+                                                    value: Int(
+                                                        9,
+                                                    ),
+                                                },
+                                            ),
+                                            NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 105..107,
+                                                    value: Int(
+                                                        10,
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                        ctx: Load,
+                                    },
+                                ),
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 109..121,
+                        value: Compare(
+                            CompareExpr {
+                                range: 109..121,
+                                left: Await(
+                                    AwaitExpr {
+                                        range: 109..116,
+                                        value: NumberLiteral(
+                                            NumberLiteralExpr {
+                                                range: 115..116,
+                                                value: Int(
+                                                    1,
+                                                ),
+                                            },
+                                        ),
+                                    },
+                                ),
+                                ops: [
+                                    Eq,
+                                ],
+                                comparators: [
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 120..121,
+                                            value: Int(
+                                                1,
+                                            ),
+                                        },
+                                    ),
+                                ],
+                            },
+                        ),
+                    },
+                ),
+                Expr(
+                    ExprStmt {
+                        range: 122..147,
+                        value: IfExp(
+                            IfExpr {
+                                range: 122..147,
+                                test: BooleanLiteral(
+                                    BooleanLiteralExpr {
+                                        range: 133..137,
+                                        value: true,
+                                    },
+                                ),
+                                body: Await(
+                                    AwaitExpr {
+                                        range: 122..129,
+                                        value: Name(
+                                            NameExpr {
+                                                range: 128..129,
+                                                id: "x",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                    },
+                                ),
+                                orelse: NoneLiteral(
+                                    NoneLiteralExpr {
+                                        range: 143..147,
+                                    },
+                                ),
+                            },
+                        ),
+                    },
+                ),
+            ],
+        },
+    ),
+    parse_errors: [],
+}

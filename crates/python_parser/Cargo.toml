@@ -1,0 +1,24 @@
+[package]
+name = "python_parser"
+version = "0.0.0"
+publish = false
+authors = ["Charlie Marsh <charlie.r.marsh@gmail.com>", "LaBatata101 <labatata101@gmail.com>", "RustPython Team"]
+edition = "2021"
+
+[lib]
+
+[dependencies]
+python_ast = { path = "../python_ast" }
+ruff_text_size = { path = "../ruff_text_size" }
+
+bitflags = "2.4.1"
+is-macro = "0.3.4"
+itertools = "0.11.0"
+memchr = "2.7.1"
+unicode-ident = "1.0.11"
+unicode_names2 = "1.2.1"
+rustc-hash = "1.1.0"
+static_assertions = "1.1.0"
+
+[dev-dependencies]
+insta = { version = "1.31.0", features = ["yaml"] }

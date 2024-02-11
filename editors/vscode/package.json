@@ -1,0 +1,92 @@
+{
+    "name": "python-language-server",
+    "description": "Python language server",
+    "license": "MIT",
+    "version": "0.1.0",
+    "categories": [],
+    "keywords": [
+        "language-server",
+        "tower-lsp"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LaBatata101/python-lsp"
+    },
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "enabledApiProposals": [],
+    "activationEvents": [
+        "onLanguage:python"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "python",
+                "extensions": [
+                    ".py"
+                ]
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "python-language-server",
+            "properties": {
+                "python-language-server.trace.server": {
+                    "type": "string",
+                    "scope": "window",
+                    "enum": [
+                        "off",
+                        "messages",
+                        "verbose"
+                    ],
+                    "enumDescriptions": [
+                        "No traces",
+                        "Error only",
+                        "Full log"
+                    ],
+                    "default": "verbose",
+                    "description": "Traces the communication between VS Code and the language server."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "postinstall": "cd client && npm i",
+        "vscode:prepublish": "npm run esbuild-base -- --minify",
+        "esbuild-base": "esbuild ./client/src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+        "esbuild": "npm run esbuild-base -- --sourcemap",
+        "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+        "test-compile": "tsc -p ./",
+        "compile": "cross-env NODE_ENV=production tsc -b",
+        "watch": "rm -rf dist && tsc -b -w",
+        "lint": "eslint src --ext ts",
+        "pretest": "npm run compile && npm run lint",
+        "test": "node ./out/test/runTest.js",
+        "build": "webpack --config webpack.config.js",
+        "package": "vsce package --no-dependencies",
+        "publish": "vsce publish --no-dependencies"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^12.12.0",
+        "@types/vscode": "^1.44.0",
+        "@typescript-eslint/eslint-plugin": "^3.8.0",
+        "@typescript-eslint/parser": "^3.8.0",
+        "@electron/rebuild": "^1.11.0",
+        "cross-env": "^7.0.2",
+        "esbuild": "^0.15.10",
+        "eslint": "^7.6.0",
+        "glob": "^7.1.7",
+        "mocha": "^8.0.1",
+        "typescript": "^4.4.3",
+        "vscode-test": "^1.4.0",
+        "vscode-uri": "^3.0.2",
+        "webpack": "^5.82.1"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^8.0.2"
+    }
+}

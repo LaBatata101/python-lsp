@@ -1,0 +1,70 @@
+---
+source: crates/python_parser/src/parser/tests/context.rs
+expression: parse_ast
+---
+(
+    [
+        Assign(
+            AssignStmt {
+                range: 0..18,
+                targets: [
+                    Tuple(
+                        TupleExpr {
+                            range: 0..6,
+                            elts: [
+                                Name(
+                                    NameExpr {
+                                        range: 1..2,
+                                        id: "x",
+                                        ctx: Store,
+                                    },
+                                ),
+                                Name(
+                                    NameExpr {
+                                        range: 4..5,
+                                        id: "y",
+                                        ctx: Store,
+                                    },
+                                ),
+                            ],
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: Tuple(
+                    TupleExpr {
+                        range: 10..17,
+                        elts: [
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 10..11,
+                                    value: Int(
+                                        1,
+                                    ),
+                                },
+                            ),
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 13..14,
+                                    value: Int(
+                                        2,
+                                    ),
+                                },
+                            ),
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 16..17,
+                                    value: Int(
+                                        3,
+                                    ),
+                                },
+                            ),
+                        ],
+                        ctx: Load,
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

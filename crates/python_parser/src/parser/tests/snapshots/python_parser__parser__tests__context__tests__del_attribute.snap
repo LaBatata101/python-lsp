@@ -1,0 +1,33 @@
+---
+source: crates/python_parser/src/parser/tests/context.rs
+expression: parse_ast
+---
+(
+    [
+        Delete(
+            DeleteStmt {
+                range: 0..7,
+                targets: [
+                    Attribute(
+                        AttributeExpr {
+                            range: 4..7,
+                            value: Name(
+                                NameExpr {
+                                    range: 4..5,
+                                    id: "x",
+                                    ctx: Load,
+                                },
+                            ),
+                            attr: Identifier {
+                                id: "y",
+                                range: 6..7,
+                            },
+                            ctx: Del,
+                        },
+                    ),
+                ],
+            },
+        ),
+    ],
+    [],
+)

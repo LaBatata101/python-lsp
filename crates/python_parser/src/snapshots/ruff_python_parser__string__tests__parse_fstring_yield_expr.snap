@@ -1,0 +1,41 @@
+---
+source: crates/ruff_python_parser/src/string.rs
+expression: parse_ast
+---
+[
+    Expr(
+        StmtExpr {
+            range: 0..10,
+            value: FString(
+                ExprFString {
+                    range: 0..10,
+                    value: FStringValue {
+                        inner: Single(
+                            FString(
+                                FString {
+                                    range: 0..10,
+                                    elements: [
+                                        Expression(
+                                            FStringExpressionElement {
+                                                range: 2..9,
+                                                expression: Yield(
+                                                    ExprYield {
+                                                        range: 3..8,
+                                                        value: None,
+                                                    },
+                                                ),
+                                                debug_text: None,
+                                                conversion: None,
+                                                format_spec: None,
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ),
+                    },
+                },
+            ),
+        },
+    ),
+]

@@ -1,0 +1,36 @@
+---
+source: crates/python_parser/src/parser/tests/context.rs
+expression: parse_ast
+---
+(
+    [
+        Delete(
+            DeleteStmt {
+                range: 0..8,
+                targets: [
+                    Subscript(
+                        SubscriptExpr {
+                            range: 4..8,
+                            value: Name(
+                                NameExpr {
+                                    range: 4..5,
+                                    id: "x",
+                                    ctx: Load,
+                                },
+                            ),
+                            slice: Name(
+                                NameExpr {
+                                    range: 6..7,
+                                    id: "y",
+                                    ctx: Load,
+                                },
+                            ),
+                            ctx: Del,
+                        },
+                    ),
+                ],
+            },
+        ),
+    ],
+    [],
+)

@@ -1,3 +1,3 @@
 pub mod error;
-pub mod lexer;
-pub mod parser;
+pub mod lsp;
+pub mod semantic;

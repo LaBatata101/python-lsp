@@ -1,0 +1,59 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    GeneratorExp(
+        GeneratorExpExpr {
+            range: 0..26,
+            elt: IfExp(
+                IfExpr {
+                    range: 1..14,
+                    test: Name(
+                        NameExpr {
+                            range: 6..7,
+                            id: "y",
+                            ctx: Load,
+                        },
+                    ),
+                    body: Name(
+                        NameExpr {
+                            range: 1..2,
+                            id: "x",
+                            ctx: Load,
+                        },
+                    ),
+                    orelse: Name(
+                        NameExpr {
+                            range: 13..14,
+                            id: "y",
+                            ctx: Load,
+                        },
+                    ),
+                },
+            ),
+            generators: [
+                Comprehension {
+                    range: 15..25,
+                    target: Name(
+                        NameExpr {
+                            range: 19..20,
+                            id: "y",
+                            ctx: Store,
+                        },
+                    ),
+                    iter: Name(
+                        NameExpr {
+                            range: 24..25,
+                            id: "z",
+                            ctx: Load,
+                        },
+                    ),
+                    ifs: [],
+                    is_async: false,
+                },
+            ],
+        },
+    ),
+    [],
+)

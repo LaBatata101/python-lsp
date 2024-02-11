@@ -1,0 +1,13 @@
+[package]
+name = "ruff_index"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[lib]
+
+[dependencies]
+ruff_macros = { path = "../ruff_macros" }
+
+[dev-dependencies]
+static_assertions = "1.1.0"

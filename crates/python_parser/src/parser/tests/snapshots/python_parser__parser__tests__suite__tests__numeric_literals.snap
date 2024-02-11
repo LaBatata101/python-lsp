@@ -1,0 +1,407 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_suite(source)
+---
+(
+    [
+        Assign(
+            AssignStmt {
+                range: 0..13,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 0..1,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 4..13,
+                        value: Int(
+                            123456789,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 14..24,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 14..15,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 18..24,
+                        value: Int(
+                            123456,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 25..31,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 25..26,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 29..31,
+                        value: Float(
+                            0.1,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 32..38,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 32..33,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 36..38,
+                        value: Float(
+                            1.0,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 39..47,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 39..40,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 43..47,
+                        value: Float(
+                            10.0,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 48..56,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 48..49,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 52..56,
+                        value: Float(
+                            0.1,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 57..73,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 57..58,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 61..73,
+                        value: Float(
+                            1.00000001,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 74..97,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 74..75,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 78..97,
+                        value: Float(
+                            123456789.12345679,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 98..131,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 98..99,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 102..131,
+                        value: Float(
+                            inf,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 132..155,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 132..133,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 136..155,
+                        value: Float(
+                            inf,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 156..170,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 156..157,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 160..170,
+                        value: Complex {
+                            real: 0.0,
+                            imag: 123456789.0,
+                        },
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 171..195,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 171..172,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 175..195,
+                        value: Complex {
+                            real: 0.0,
+                            imag: 123456789.12345679,
+                        },
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 196..207,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 196..197,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 200..207,
+                        value: Int(
+                            727756,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 208..218,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 208..209,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 212..218,
+                        value: Int(
+                            11,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 219..228,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 219..220,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 223..228,
+                        value: Int(
+                            511,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 229..244,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 229..230,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 233..244,
+                        value: Float(
+                            6e-9,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 245..254,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 245..246,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 249..254,
+                        value: Int(
+                            10000,
+                        ),
+                    },
+                ),
+            },
+        ),
+        Assign(
+            AssignStmt {
+                range: 255..265,
+                targets: [
+                    Name(
+                        NameExpr {
+                            range: 255..256,
+                            id: "x",
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 259..265,
+                        value: Int(
+                            133333,
+                        ),
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

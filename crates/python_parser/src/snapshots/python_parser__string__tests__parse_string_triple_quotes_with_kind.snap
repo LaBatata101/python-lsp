@@ -1,0 +1,25 @@
+---
+source: crates/python_parser/src/string.rs
+expression: parse_ast
+---
+[
+    Expr(
+        ExprStmt {
+            range: 0..20,
+            value: StringLiteral(
+                StringLiteralExpr {
+                    range: 0..20,
+                    value: StringLiteralValue {
+                        inner: Single(
+                            StringLiteral {
+                                range: 0..20,
+                                value: "Hello, world!",
+                                unicode: true,
+                            },
+                        ),
+                    },
+                },
+            ),
+        },
+    ),
+]

@@ -1,0 +1,1151 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_suite(source)
+---
+(
+    [
+        With(
+            WithStmt {
+                range: 0..12,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 5..6,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 5..6,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 8..12,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 13..30,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 18..24,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 18..19,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 23..24,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 26..30,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 31..46,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 36..37,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 36..37,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                    WithItem {
+                        range: 39..40,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 39..40,
+                                value: Int(
+                                    1,
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 42..46,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 47..72,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 52..58,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 52..53,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 57..58,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                    WithItem {
+                        range: 60..66,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 60..61,
+                                value: Int(
+                                    1,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 65..66,
+                                    id: "y",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 68..72,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 73..97,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 78..91,
+                        context_expr: IfExp(
+                            IfExpr {
+                                range: 78..91,
+                                test: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 83..84,
+                                        value: Int(
+                                            1,
+                                        ),
+                                    },
+                                ),
+                                body: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 78..79,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                                orelse: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 90..91,
+                                        value: Int(
+                                            2,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 93..97,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 98..127,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 103..121,
+                        context_expr: IfExp(
+                            IfExpr {
+                                range: 103..116,
+                                test: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 108..109,
+                                        value: Int(
+                                            1,
+                                        ),
+                                    },
+                                ),
+                                body: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 103..104,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                                orelse: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 115..116,
+                                        value: Int(
+                                            2,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 120..121,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 123..127,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 128..141,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 133..135,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 133..135,
+                                elts: [],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 137..141,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 142..160,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 147..154,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 147..149,
+                                elts: [],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 153..154,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 156..160,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 161..175,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 167..168,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 167..168,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 171..175,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 176..195,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 181..189,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 182..183,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 188..189,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 191..195,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 196..211,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 202..203,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 202..203,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 207..211,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 212..232,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 217..226,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 218..220,
+                                elts: [
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 218..219,
+                                            value: Int(
+                                                0,
+                                            ),
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 225..226,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 228..232,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 233..250,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 239..240,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 239..240,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                    WithItem {
+                        range: 242..243,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 242..243,
+                                value: Int(
+                                    1,
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 246..250,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 251..273,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 256..267,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 257..261,
+                                elts: [
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 257..258,
+                                            value: Int(
+                                                0,
+                                            ),
+                                        },
+                                    ),
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 260..261,
+                                            value: Int(
+                                                1,
+                                            ),
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 266..267,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 269..273,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 274..290,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 279..284,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 280..283,
+                                elts: [
+                                    Starred(
+                                        StarredExpr {
+                                            range: 280..282,
+                                            value: Name(
+                                                NameExpr {
+                                                    range: 281..282,
+                                                    id: "a",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                            ctx: Load,
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 286..290,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 291..312,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 296..306,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 297..300,
+                                elts: [
+                                    Starred(
+                                        StarredExpr {
+                                            range: 297..299,
+                                            value: Name(
+                                                NameExpr {
+                                                    range: 298..299,
+                                                    id: "a",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                            ctx: Load,
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 305..306,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 308..312,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 313..331,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 318..325,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 319..324,
+                                elts: [
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 319..320,
+                                            value: Int(
+                                                0,
+                                            ),
+                                        },
+                                    ),
+                                    Starred(
+                                        StarredExpr {
+                                            range: 322..324,
+                                            value: Name(
+                                                NameExpr {
+                                                    range: 323..324,
+                                                    id: "a",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                            ctx: Load,
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 327..331,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 332..355,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 337..349,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 338..343,
+                                elts: [
+                                    NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 338..339,
+                                            value: Int(
+                                                0,
+                                            ),
+                                        },
+                                    ),
+                                    Starred(
+                                        StarredExpr {
+                                            range: 341..343,
+                                            value: Name(
+                                                NameExpr {
+                                                    range: 342..343,
+                                                    id: "a",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                            ctx: Load,
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 348..349,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 351..355,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 356..375,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 362..368,
+                        context_expr: NamedExpr(
+                            NamedExpr {
+                                range: 362..368,
+                                target: Name(
+                                    NameExpr {
+                                        range: 362..363,
+                                        id: "a",
+                                        ctx: Store,
+                                    },
+                                ),
+                                value: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 367..368,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 371..375,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 376..400,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 381..394,
+                        context_expr: NamedExpr(
+                            NamedExpr {
+                                range: 382..388,
+                                target: Name(
+                                    NameExpr {
+                                        range: 382..383,
+                                        id: "a",
+                                        ctx: Store,
+                                    },
+                                ),
+                                value: NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 387..388,
+                                        value: Int(
+                                            0,
+                                        ),
+                                    },
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 393..394,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 396..400,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 401..428,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 406..422,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 407..421,
+                                elts: [
+                                    NamedExpr(
+                                        NamedExpr {
+                                            range: 407..413,
+                                            target: Name(
+                                                NameExpr {
+                                                    range: 407..408,
+                                                    id: "a",
+                                                    ctx: Store,
+                                                },
+                                            ),
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 412..413,
+                                                    value: Int(
+                                                        0,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                    NamedExpr(
+                                        NamedExpr {
+                                            range: 415..421,
+                                            target: Name(
+                                                NameExpr {
+                                                    range: 415..416,
+                                                    id: "b",
+                                                    ctx: Store,
+                                                },
+                                            ),
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 420..421,
+                                                    value: Int(
+                                                        1,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: None,
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 424..428,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 429..461,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 434..455,
+                        context_expr: Tuple(
+                            TupleExpr {
+                                range: 435..449,
+                                elts: [
+                                    NamedExpr(
+                                        NamedExpr {
+                                            range: 435..441,
+                                            target: Name(
+                                                NameExpr {
+                                                    range: 435..436,
+                                                    id: "a",
+                                                    ctx: Store,
+                                                },
+                                            ),
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 440..441,
+                                                    value: Int(
+                                                        0,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                    NamedExpr(
+                                        NamedExpr {
+                                            range: 443..449,
+                                            target: Name(
+                                                NameExpr {
+                                                    range: 443..444,
+                                                    id: "b",
+                                                    ctx: Store,
+                                                },
+                                            ),
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 448..449,
+                                                    value: Int(
+                                                        1,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                ],
+                                ctx: Load,
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 454..455,
+                                    id: "x",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 457..461,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 462..481,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 468..474,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 468..469,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 473..474,
+                                    id: "a",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 477..481,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 482..502,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 488..494,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 488..489,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 493..494,
+                                    id: "a",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 498..502,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 503..530,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 509..515,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 509..510,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 514..515,
+                                    id: "a",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                    WithItem {
+                        range: 517..523,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 517..518,
+                                value: Int(
+                                    1,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 522..523,
+                                    id: "b",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 526..530,
+                        },
+                    ),
+                ],
+            },
+        ),
+        With(
+            WithStmt {
+                range: 531..559,
+                is_async: false,
+                items: [
+                    WithItem {
+                        range: 537..543,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 537..538,
+                                value: Int(
+                                    0,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 542..543,
+                                    id: "a",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                    WithItem {
+                        range: 545..551,
+                        context_expr: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 545..546,
+                                value: Int(
+                                    1,
+                                ),
+                            },
+                        ),
+                        optional_vars: Some(
+                            Name(
+                                NameExpr {
+                                    range: 550..551,
+                                    id: "b",
+                                    ctx: Store,
+                                },
+                            ),
+                        ),
+                    },
+                ],
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 555..559,
+                        },
+                    ),
+                ],
+            },
+        ),
+    ],
+    [],
+)

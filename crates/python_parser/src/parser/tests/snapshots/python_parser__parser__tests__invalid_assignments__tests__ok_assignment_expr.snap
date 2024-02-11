@@ -1,0 +1,34 @@
+---
+source: crates/python_parser/src/parser/tests/invalid_assignments.rs
+expression: ast
+---
+(
+    [
+        Expr(
+            ExprStmt {
+                range: 0..8,
+                value: NamedExpr(
+                    NamedExpr {
+                        range: 1..7,
+                        target: Name(
+                            NameExpr {
+                                range: 1..2,
+                                id: "x",
+                                ctx: Store,
+                            },
+                        ),
+                        value: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 6..7,
+                                value: Int(
+                                    5,
+                                ),
+                            },
+                        ),
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

@@ -1,0 +1,63 @@
+---
+source: crates/ruff_python_parser/src/string.rs
+expression: parse_ast
+---
+[
+    Expr(
+        StmtExpr {
+            range: 0..18,
+            value: FString(
+                ExprFString {
+                    range: 0..18,
+                    value: FStringValue {
+                        inner: Single(
+                            FString(
+                                FString {
+                                    range: 0..18,
+                                    elements: [
+                                        Expression(
+                                            FStringExpressionElement {
+                                                range: 2..5,
+                                                expression: Name(
+                                                    ExprName {
+                                                        range: 3..4,
+                                                        id: "a",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                debug_text: None,
+                                                conversion: None,
+                                                format_spec: None,
+                                            },
+                                        ),
+                                        Expression(
+                                            FStringExpressionElement {
+                                                range: 5..10,
+                                                expression: Name(
+                                                    ExprName {
+                                                        range: 7..8,
+                                                        id: "b",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                debug_text: None,
+                                                conversion: None,
+                                                format_spec: None,
+                                            },
+                                        ),
+                                        Literal(
+                                            FStringLiteralElement {
+                                                range: 10..17,
+                                                value: "{foo}",
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ),
+                    },
+                },
+            ),
+        },
+    ),
+]

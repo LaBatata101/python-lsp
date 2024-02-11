@@ -1,0 +1,17 @@
+[package]
+name = "python_ast"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[lib]
+
+[dependencies]
+ruff_source_file = { path = "../ruff_source_file" }
+ruff_text_size = { path = "../ruff_text_size" }
+
+bitflags = "2.4.1"
+is-macro = "0.3.4"
+itertools = "0.11.0"
+smallvec = "1.11.2"
+static_assertions = "1.1.0"

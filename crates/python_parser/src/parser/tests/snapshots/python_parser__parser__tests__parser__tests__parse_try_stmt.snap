@@ -1,0 +1,496 @@
+---
+source: crates/python_parser/src/parser/tests/parser.rs
+expression: "parse(\"\ntry:\n    ...\nexcept:\n    ...\n\ntry:\n    ...\nexcept Exception1 as e:\n    ...\nexcept Exception2 as e:\n    ...\n\ntry:\n    ...\nexcept Exception as e:\n    ...\nexcept:\n    ...\nfinally:\n    ...\n\ntry:\n    ...\nexcept:\n    ...\nelse:\n    ...\n\ntry:\n    ...\nexcept:\n    ...\nelse:\n    ...\nfinally:\n    ...\n\ntry:\n    ...\nfinally:\n    ...\n\ntry:\n    ...\nelse:\n    ...\nfinally:\n    ...\n\ntry:\n    ...\nexcept* a as A:\n    ...\nexcept* b:\n    ...\n\")"
+---
+ParsedFile {
+    ast: Module(
+        ModModule {
+            range: 0..424,
+            body: [
+                Try(
+                    TryStmt {
+                        range: 1..29,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 10..13,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 10..13,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        handlers: [
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 14..29,
+                                    type_: None,
+                                    name: None,
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 26..29,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 26..29,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ],
+                        orelse: [],
+                        finalbody: [],
+                        is_star: false,
+                    },
+                ),
+                Try(
+                    TryStmt {
+                        range: 31..107,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 40..43,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 40..43,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        handlers: [
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 44..75,
+                                    type_: Some(
+                                        Name(
+                                            NameExpr {
+                                                range: 51..61,
+                                                id: "Exception1",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                    ),
+                                    name: Some(
+                                        Identifier {
+                                            id: "e",
+                                            range: 65..66,
+                                        },
+                                    ),
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 72..75,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 72..75,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 76..107,
+                                    type_: Some(
+                                        Name(
+                                            NameExpr {
+                                                range: 83..93,
+                                                id: "Exception2",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                    ),
+                                    name: Some(
+                                        Identifier {
+                                            id: "e",
+                                            range: 97..98,
+                                        },
+                                    ),
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 104..107,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 104..107,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ],
+                        orelse: [],
+                        finalbody: [],
+                        is_star: false,
+                    },
+                ),
+                Try(
+                    TryStmt {
+                        range: 109..185,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 118..121,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 118..121,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        handlers: [
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 122..152,
+                                    type_: Some(
+                                        Name(
+                                            NameExpr {
+                                                range: 129..138,
+                                                id: "Exception",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                    ),
+                                    name: Some(
+                                        Identifier {
+                                            id: "e",
+                                            range: 142..143,
+                                        },
+                                    ),
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 149..152,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 149..152,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 153..168,
+                                    type_: None,
+                                    name: None,
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 165..168,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 165..168,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ],
+                        orelse: [],
+                        finalbody: [
+                            Expr(
+                                ExprStmt {
+                                    range: 182..185,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 182..185,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        is_star: false,
+                    },
+                ),
+                Try(
+                    TryStmt {
+                        range: 187..229,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 196..199,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 196..199,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        handlers: [
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 200..215,
+                                    type_: None,
+                                    name: None,
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 212..215,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 212..215,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ],
+                        orelse: [
+                            Expr(
+                                ExprStmt {
+                                    range: 226..229,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 226..229,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        finalbody: [],
+                        is_star: false,
+                    },
+                ),
+                Try(
+                    TryStmt {
+                        range: 231..290,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 240..243,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 240..243,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        handlers: [
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 244..259,
+                                    type_: None,
+                                    name: None,
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 256..259,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 256..259,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ],
+                        orelse: [
+                            Expr(
+                                ExprStmt {
+                                    range: 270..273,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 270..273,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        finalbody: [
+                            Expr(
+                                ExprStmt {
+                                    range: 287..290,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 287..290,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        is_star: false,
+                    },
+                ),
+                Try(
+                    TryStmt {
+                        range: 292..321,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 301..304,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 301..304,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        handlers: [],
+                        orelse: [],
+                        finalbody: [
+                            Expr(
+                                ExprStmt {
+                                    range: 318..321,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 318..321,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        is_star: false,
+                    },
+                ),
+                Try(
+                    TryStmt {
+                        range: 323..366,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 332..335,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 332..335,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        handlers: [],
+                        orelse: [
+                            Expr(
+                                ExprStmt {
+                                    range: 346..349,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 346..349,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        finalbody: [
+                            Expr(
+                                ExprStmt {
+                                    range: 363..366,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 363..366,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        is_star: false,
+                    },
+                ),
+                Try(
+                    TryStmt {
+                        range: 368..423,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 377..380,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 377..380,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        handlers: [
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 381..404,
+                                    type_: Some(
+                                        Name(
+                                            NameExpr {
+                                                range: 389..390,
+                                                id: "a",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                    ),
+                                    name: Some(
+                                        Identifier {
+                                            id: "A",
+                                            range: 394..395,
+                                        },
+                                    ),
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 401..404,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 401..404,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                            ExceptHandler(
+                                ExceptHandlerExceptHandler {
+                                    range: 405..423,
+                                    type_: Some(
+                                        Name(
+                                            NameExpr {
+                                                range: 413..414,
+                                                id: "b",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                    ),
+                                    name: None,
+                                    body: [
+                                        Expr(
+                                            ExprStmt {
+                                                range: 420..423,
+                                                value: EllipsisLiteral(
+                                                    EllipsisLiteralExpr {
+                                                        range: 420..423,
+                                                    },
+                                                ),
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ],
+                        orelse: [],
+                        finalbody: [],
+                        is_star: true,
+                    },
+                ),
+            ],
+        },
+    ),
+    parse_errors: [],
+}

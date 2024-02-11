@@ -1,0 +1,39 @@
+---
+source: crates/python_parser/src/parser/tests/context.rs
+expression: parse_ast
+---
+(
+    [
+        AnnAssign(
+            AnnAssignStmt {
+                range: 0..10,
+                target: Name(
+                    NameExpr {
+                        range: 0..1,
+                        id: "x",
+                        ctx: Store,
+                    },
+                ),
+                annotation: Name(
+                    NameExpr {
+                        range: 3..6,
+                        id: "int",
+                        ctx: Load,
+                    },
+                ),
+                value: Some(
+                    NumberLiteral(
+                        NumberLiteralExpr {
+                            range: 9..10,
+                            value: Int(
+                                1,
+                            ),
+                        },
+                    ),
+                ),
+                simple: true,
+            },
+        ),
+    ],
+    [],
+)

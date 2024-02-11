@@ -1,0 +1,37 @@
+---
+source: crates/python_parser/src/parser/tests/function.rs
+expression: parse_ast
+---
+(
+    [
+        FunctionDef(
+            FunctionDefStmt {
+                range: 0..13,
+                is_async: false,
+                decorator_list: [],
+                name: Identifier {
+                    id: "f",
+                    range: 4..5,
+                },
+                type_params: None,
+                parameters: Parameters {
+                    range: 5..7,
+                    posonlyargs: [],
+                    args: [],
+                    vararg: None,
+                    kwonlyargs: [],
+                    kwarg: None,
+                },
+                returns: None,
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 9..13,
+                        },
+                    ),
+                ],
+            },
+        ),
+    ],
+    [],
+)

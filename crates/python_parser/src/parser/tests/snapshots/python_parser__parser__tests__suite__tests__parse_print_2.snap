@@ -1,0 +1,54 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    [
+        Expr(
+            ExprStmt {
+                range: 0..23,
+                value: Call(
+                    CallExpr {
+                        range: 0..23,
+                        func: Name(
+                            NameExpr {
+                                range: 0..5,
+                                id: "print",
+                                ctx: Load,
+                            },
+                        ),
+                        arguments: Arguments {
+                            range: 5..23,
+                            args: [
+                                StringLiteral(
+                                    StringLiteralExpr {
+                                        range: 6..19,
+                                        value: StringLiteralValue {
+                                            inner: Single(
+                                                StringLiteral {
+                                                    range: 6..19,
+                                                    value: "Hello world",
+                                                    unicode: false,
+                                                },
+                                            ),
+                                        },
+                                    },
+                                ),
+                                NumberLiteral(
+                                    NumberLiteralExpr {
+                                        range: 21..22,
+                                        value: Int(
+                                            2,
+                                        ),
+                                    },
+                                ),
+                            ],
+                            keywords: [],
+                        },
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

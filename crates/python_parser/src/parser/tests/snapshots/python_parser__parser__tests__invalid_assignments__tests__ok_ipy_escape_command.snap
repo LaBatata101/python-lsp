@@ -1,0 +1,21 @@
+---
+source: crates/python_parser/src/parser/tests/invalid_assignments.rs
+expression: ast
+---
+ParsedFile {
+    ast: Module(
+        ModModule {
+            range: 0..9,
+            body: [
+                IpyEscapeCommand(
+                    IpyEscapeCommandStmt {
+                        range: 0..9,
+                        kind: Shell,
+                        value: "foo = 42",
+                    },
+                ),
+            ],
+        },
+    ),
+    parse_errors: [],
+}

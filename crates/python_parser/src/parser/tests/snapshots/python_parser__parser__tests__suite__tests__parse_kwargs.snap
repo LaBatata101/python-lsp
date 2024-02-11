@@ -1,0 +1,64 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    [
+        Expr(
+            ExprStmt {
+                range: 0..32,
+                value: Call(
+                    CallExpr {
+                        range: 0..32,
+                        func: Name(
+                            NameExpr {
+                                range: 0..7,
+                                id: "my_func",
+                                ctx: Load,
+                            },
+                        ),
+                        arguments: Arguments {
+                            range: 7..32,
+                            args: [
+                                StringLiteral(
+                                    StringLiteralExpr {
+                                        range: 8..20,
+                                        value: StringLiteralValue {
+                                            inner: Single(
+                                                StringLiteral {
+                                                    range: 8..20,
+                                                    value: "positional",
+                                                    unicode: false,
+                                                },
+                                            ),
+                                        },
+                                    },
+                                ),
+                            ],
+                            keywords: [
+                                Keyword {
+                                    range: 22..31,
+                                    arg: Some(
+                                        Identifier {
+                                            id: "keyword",
+                                            range: 22..29,
+                                        },
+                                    ),
+                                    value: NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 30..31,
+                                            value: Int(
+                                                2,
+                                            ),
+                                        },
+                                    ),
+                                },
+                            ],
+                        },
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

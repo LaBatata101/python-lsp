@@ -1,0 +1,29 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    BoolOp(
+        BoolOpExpr {
+            range: 0..7,
+            op: And,
+            values: [
+                Name(
+                    NameExpr {
+                        range: 0..1,
+                        id: "x",
+                        ctx: Load,
+                    },
+                ),
+                Name(
+                    NameExpr {
+                        range: 6..7,
+                        id: "y",
+                        ctx: Load,
+                    },
+                ),
+            ],
+        },
+    ),
+    [],
+)

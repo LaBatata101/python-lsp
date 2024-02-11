@@ -1,0 +1,435 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    [
+        Try(
+            TryStmt {
+                range: 0..260,
+                body: [
+                    Raise(
+                        RaiseStmt {
+                            range: 9..98,
+                            exc: Some(
+                                Call(
+                                    CallExpr {
+                                        range: 15..98,
+                                        func: Name(
+                                            NameExpr {
+                                                range: 15..29,
+                                                id: "ExceptionGroup",
+                                                ctx: Load,
+                                            },
+                                        ),
+                                        arguments: Arguments {
+                                            range: 29..98,
+                                            args: [
+                                                StringLiteral(
+                                                    StringLiteralExpr {
+                                                        range: 30..34,
+                                                        value: StringLiteralValue {
+                                                            inner: Single(
+                                                                StringLiteral {
+                                                                    range: 30..34,
+                                                                    value: "eg",
+                                                                    unicode: false,
+                                                                },
+                                                            ),
+                                                        },
+                                                    },
+                                                ),
+                                                List(
+                                                    ListExpr {
+                                                        range: 44..97,
+                                                        elts: [
+                                                            Call(
+                                                                CallExpr {
+                                                                    range: 45..58,
+                                                                    func: Name(
+                                                                        NameExpr {
+                                                                            range: 45..55,
+                                                                            id: "ValueError",
+                                                                            ctx: Load,
+                                                                        },
+                                                                    ),
+                                                                    arguments: Arguments {
+                                                                        range: 55..58,
+                                                                        args: [
+                                                                            NumberLiteral(
+                                                                                NumberLiteralExpr {
+                                                                                    range: 56..57,
+                                                                                    value: Int(
+                                                                                        1,
+                                                                                    ),
+                                                                                },
+                                                                            ),
+                                                                        ],
+                                                                        keywords: [],
+                                                                    },
+                                                                },
+                                                            ),
+                                                            Call(
+                                                                CallExpr {
+                                                                    range: 60..72,
+                                                                    func: Name(
+                                                                        NameExpr {
+                                                                            range: 60..69,
+                                                                            id: "TypeError",
+                                                                            ctx: Load,
+                                                                        },
+                                                                    ),
+                                                                    arguments: Arguments {
+                                                                        range: 69..72,
+                                                                        args: [
+                                                                            NumberLiteral(
+                                                                                NumberLiteralExpr {
+                                                                                    range: 70..71,
+                                                                                    value: Int(
+                                                                                        2,
+                                                                                    ),
+                                                                                },
+                                                                            ),
+                                                                        ],
+                                                                        keywords: [],
+                                                                    },
+                                                                },
+                                                            ),
+                                                            Call(
+                                                                CallExpr {
+                                                                    range: 74..84,
+                                                                    func: Name(
+                                                                        NameExpr {
+                                                                            range: 74..81,
+                                                                            id: "OSError",
+                                                                            ctx: Load,
+                                                                        },
+                                                                    ),
+                                                                    arguments: Arguments {
+                                                                        range: 81..84,
+                                                                        args: [
+                                                                            NumberLiteral(
+                                                                                NumberLiteralExpr {
+                                                                                    range: 82..83,
+                                                                                    value: Int(
+                                                                                        3,
+                                                                                    ),
+                                                                                },
+                                                                            ),
+                                                                        ],
+                                                                        keywords: [],
+                                                                    },
+                                                                },
+                                                            ),
+                                                            Call(
+                                                                CallExpr {
+                                                                    range: 86..96,
+                                                                    func: Name(
+                                                                        NameExpr {
+                                                                            range: 86..93,
+                                                                            id: "OSError",
+                                                                            ctx: Load,
+                                                                        },
+                                                                    ),
+                                                                    arguments: Arguments {
+                                                                        range: 93..96,
+                                                                        args: [
+                                                                            NumberLiteral(
+                                                                                NumberLiteralExpr {
+                                                                                    range: 94..95,
+                                                                                    value: Int(
+                                                                                        4,
+                                                                                    ),
+                                                                                },
+                                                                            ),
+                                                                        ],
+                                                                        keywords: [],
+                                                                    },
+                                                                },
+                                                            ),
+                                                        ],
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                            ],
+                                            keywords: [],
+                                        },
+                                    },
+                                ),
+                            ),
+                            cause: None,
+                        },
+                    ),
+                ],
+                handlers: [
+                    ExceptHandler(
+                        ExceptHandlerExceptHandler {
+                            range: 99..180,
+                            type_: Some(
+                                Name(
+                                    NameExpr {
+                                        range: 107..116,
+                                        id: "TypeError",
+                                        ctx: Load,
+                                    },
+                                ),
+                            ),
+                            name: Some(
+                                Identifier {
+                                    id: "e",
+                                    range: 120..121,
+                                },
+                            ),
+                            body: [
+                                Expr(
+                                    ExprStmt {
+                                        range: 127..180,
+                                        value: Call(
+                                            CallExpr {
+                                                range: 127..180,
+                                                func: Name(
+                                                    NameExpr {
+                                                        range: 127..132,
+                                                        id: "print",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                arguments: Arguments {
+                                                    range: 132..180,
+                                                    args: [
+                                                        FString(
+                                                            FStringExpr {
+                                                                range: 133..179,
+                                                                value: FStringValue {
+                                                                    inner: Single(
+                                                                        FString(
+                                                                            FString {
+                                                                                range: 133..179,
+                                                                                elements: [
+                                                                                    Literal(
+                                                                                        FStringLiteralElement {
+                                                                                            range: 135..142,
+                                                                                            value: "caught ",
+                                                                                        },
+                                                                                    ),
+                                                                                    Expression(
+                                                                                        FStringExpressionElement {
+                                                                                            range: 142..151,
+                                                                                            expression: Call(
+                                                                                                CallExpr {
+                                                                                                    range: 143..150,
+                                                                                                    func: Name(
+                                                                                                        NameExpr {
+                                                                                                            range: 143..147,
+                                                                                                            id: "type",
+                                                                                                            ctx: Load,
+                                                                                                        },
+                                                                                                    ),
+                                                                                                    arguments: Arguments {
+                                                                                                        range: 147..150,
+                                                                                                        args: [
+                                                                                                            Name(
+                                                                                                                NameExpr {
+                                                                                                                    range: 148..149,
+                                                                                                                    id: "e",
+                                                                                                                    ctx: Load,
+                                                                                                                },
+                                                                                                            ),
+                                                                                                        ],
+                                                                                                        keywords: [],
+                                                                                                    },
+                                                                                                },
+                                                                                            ),
+                                                                                            debug_text: None,
+                                                                                            conversion: None,
+                                                                                            format_spec: None,
+                                                                                        },
+                                                                                    ),
+                                                                                    Literal(
+                                                                                        FStringLiteralElement {
+                                                                                            range: 151..164,
+                                                                                            value: " with nested ",
+                                                                                        },
+                                                                                    ),
+                                                                                    Expression(
+                                                                                        FStringExpressionElement {
+                                                                                            range: 164..178,
+                                                                                            expression: Attribute(
+                                                                                                AttributeExpr {
+                                                                                                    range: 165..177,
+                                                                                                    value: Name(
+                                                                                                        NameExpr {
+                                                                                                            range: 165..166,
+                                                                                                            id: "e",
+                                                                                                            ctx: Load,
+                                                                                                        },
+                                                                                                    ),
+                                                                                                    attr: Identifier {
+                                                                                                        id: "exceptions",
+                                                                                                        range: 167..177,
+                                                                                                    },
+                                                                                                    ctx: Load,
+                                                                                                },
+                                                                                            ),
+                                                                                            debug_text: None,
+                                                                                            conversion: None,
+                                                                                            format_spec: None,
+                                                                                        },
+                                                                                    ),
+                                                                                ],
+                                                                            },
+                                                                        ),
+                                                                    ),
+                                                                },
+                                                            },
+                                                        ),
+                                                    ],
+                                                    keywords: [],
+                                                },
+                                            },
+                                        ),
+                                    },
+                                ),
+                            ],
+                        },
+                    ),
+                    ExceptHandler(
+                        ExceptHandlerExceptHandler {
+                            range: 181..260,
+                            type_: Some(
+                                Name(
+                                    NameExpr {
+                                        range: 189..196,
+                                        id: "OSError",
+                                        ctx: Load,
+                                    },
+                                ),
+                            ),
+                            name: Some(
+                                Identifier {
+                                    id: "e",
+                                    range: 200..201,
+                                },
+                            ),
+                            body: [
+                                Expr(
+                                    ExprStmt {
+                                        range: 207..260,
+                                        value: Call(
+                                            CallExpr {
+                                                range: 207..260,
+                                                func: Name(
+                                                    NameExpr {
+                                                        range: 207..212,
+                                                        id: "print",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                arguments: Arguments {
+                                                    range: 212..260,
+                                                    args: [
+                                                        FString(
+                                                            FStringExpr {
+                                                                range: 213..259,
+                                                                value: FStringValue {
+                                                                    inner: Single(
+                                                                        FString(
+                                                                            FString {
+                                                                                range: 213..259,
+                                                                                elements: [
+                                                                                    Literal(
+                                                                                        FStringLiteralElement {
+                                                                                            range: 215..222,
+                                                                                            value: "caught ",
+                                                                                        },
+                                                                                    ),
+                                                                                    Expression(
+                                                                                        FStringExpressionElement {
+                                                                                            range: 222..231,
+                                                                                            expression: Call(
+                                                                                                CallExpr {
+                                                                                                    range: 223..230,
+                                                                                                    func: Name(
+                                                                                                        NameExpr {
+                                                                                                            range: 223..227,
+                                                                                                            id: "type",
+                                                                                                            ctx: Load,
+                                                                                                        },
+                                                                                                    ),
+                                                                                                    arguments: Arguments {
+                                                                                                        range: 227..230,
+                                                                                                        args: [
+                                                                                                            Name(
+                                                                                                                NameExpr {
+                                                                                                                    range: 228..229,
+                                                                                                                    id: "e",
+                                                                                                                    ctx: Load,
+                                                                                                                },
+                                                                                                            ),
+                                                                                                        ],
+                                                                                                        keywords: [],
+                                                                                                    },
+                                                                                                },
+                                                                                            ),
+                                                                                            debug_text: None,
+                                                                                            conversion: None,
+                                                                                            format_spec: None,
+                                                                                        },
+                                                                                    ),
+                                                                                    Literal(
+                                                                                        FStringLiteralElement {
+                                                                                            range: 231..244,
+                                                                                            value: " with nested ",
+                                                                                        },
+                                                                                    ),
+                                                                                    Expression(
+                                                                                        FStringExpressionElement {
+                                                                                            range: 244..258,
+                                                                                            expression: Attribute(
+                                                                                                AttributeExpr {
+                                                                                                    range: 245..257,
+                                                                                                    value: Name(
+                                                                                                        NameExpr {
+                                                                                                            range: 245..246,
+                                                                                                            id: "e",
+                                                                                                            ctx: Load,
+                                                                                                        },
+                                                                                                    ),
+                                                                                                    attr: Identifier {
+                                                                                                        id: "exceptions",
+                                                                                                        range: 247..257,
+                                                                                                    },
+                                                                                                    ctx: Load,
+                                                                                                },
+                                                                                            ),
+                                                                                            debug_text: None,
+                                                                                            conversion: None,
+                                                                                            format_spec: None,
+                                                                                        },
+                                                                                    ),
+                                                                                ],
+                                                                            },
+                                                                        ),
+                                                                    ),
+                                                                },
+                                                            },
+                                                        ),
+                                                    ],
+                                                    keywords: [],
+                                                },
+                                            },
+                                        ),
+                                    },
+                                ),
+                            ],
+                        },
+                    ),
+                ],
+                orelse: [],
+                finalbody: [],
+                is_star: true,
+            },
+        ),
+    ],
+    [],
+)

@@ -1,9 +1,0 @@
----
-source: src/lexer/mod.rs
-expression: "LexerDebug::new(&lexer, source)"
----
-[
-    "[" OpenBracket 0..1,
-    "1" Number(Decimal) 1..2,
-    "" NewLine 2..2,
-]

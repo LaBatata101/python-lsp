@@ -1,0 +1,42 @@
+---
+source: crates/python_parser/src/parser/tests/context.rs
+expression: parse_ast
+---
+(
+    [
+        If(
+            IfStmt {
+                range: 0..14,
+                test: NamedExpr(
+                    NamedExpr {
+                        range: 3..8,
+                        target: Name(
+                            NameExpr {
+                                range: 3..4,
+                                id: "x",
+                                ctx: Store,
+                            },
+                        ),
+                        value: NumberLiteral(
+                            NumberLiteralExpr {
+                                range: 7..8,
+                                value: Int(
+                                    1,
+                                ),
+                            },
+                        ),
+                    },
+                ),
+                body: [
+                    Pass(
+                        PassStmt {
+                            range: 10..14,
+                        },
+                    ),
+                ],
+                elif_else_clauses: [],
+            },
+        ),
+    ],
+    [],
+)

@@ -1,0 +1,34 @@
+---
+source: crates/python_parser/src/string.rs
+expression: parse_ast
+---
+[
+    Assign(
+        AssignStmt {
+            range: 0..16,
+            targets: [
+                Name(
+                    NameExpr {
+                        range: 0..4,
+                        id: "bold",
+                        ctx: Store,
+                    },
+                ),
+            ],
+            value: StringLiteral(
+                StringLiteralExpr {
+                    range: 7..16,
+                    value: StringLiteralValue {
+                        inner: Single(
+                            StringLiteral {
+                                range: 7..16,
+                                value: "\u{3}8[1m",
+                                unicode: false,
+                            },
+                        ),
+                    },
+                },
+            ),
+        },
+    ),
+]

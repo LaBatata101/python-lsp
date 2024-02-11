@@ -1,9 +1,0 @@
----
-source: src/lexer/mod.rs
-expression: "LexerDebug::new(&lexer, &source)"
----
-[
-    "99232" Number(Decimal) 0..5,
-    "# foo" Comment 7..12,
-    "" NewLine 12..12,
-]

@@ -1,0 +1,155 @@
+---
+source: crates/python_parser/src/parser/tests/parser.rs
+expression: "parse(\"\nasync def f():\n    ...\n\nasync for i in iter:\n    ...\n\nasync with x:\n    ...\n\n@a\nasync def x():\n    ...\n\")"
+---
+ParsedFile {
+    ast: Module(
+        ModModule {
+            range: 0..104,
+            body: [
+                FunctionDef(
+                    FunctionDefStmt {
+                        range: 1..23,
+                        is_async: true,
+                        decorator_list: [],
+                        name: Identifier {
+                            id: "f",
+                            range: 11..12,
+                        },
+                        type_params: None,
+                        parameters: Parameters {
+                            range: 12..14,
+                            posonlyargs: [],
+                            args: [],
+                            vararg: None,
+                            kwonlyargs: [],
+                            kwarg: None,
+                        },
+                        returns: None,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 20..23,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 20..23,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ),
+                For(
+                    ForStmt {
+                        range: 25..53,
+                        is_async: true,
+                        target: Name(
+                            NameExpr {
+                                range: 35..36,
+                                id: "i",
+                                ctx: Store,
+                            },
+                        ),
+                        iter: Name(
+                            NameExpr {
+                                range: 40..44,
+                                id: "iter",
+                                ctx: Load,
+                            },
+                        ),
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 50..53,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 50..53,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                        orelse: [],
+                    },
+                ),
+                With(
+                    WithStmt {
+                        range: 55..76,
+                        is_async: true,
+                        items: [
+                            WithItem {
+                                range: 66..67,
+                                context_expr: Name(
+                                    NameExpr {
+                                        range: 66..67,
+                                        id: "x",
+                                        ctx: Load,
+                                    },
+                                ),
+                                optional_vars: None,
+                            },
+                        ],
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 73..76,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 73..76,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ),
+                FunctionDef(
+                    FunctionDefStmt {
+                        range: 78..103,
+                        is_async: true,
+                        decorator_list: [
+                            Decorator {
+                                range: 78..80,
+                                expression: Name(
+                                    NameExpr {
+                                        range: 79..80,
+                                        id: "a",
+                                        ctx: Load,
+                                    },
+                                ),
+                            },
+                        ],
+                        name: Identifier {
+                            id: "x",
+                            range: 91..92,
+                        },
+                        type_params: None,
+                        parameters: Parameters {
+                            range: 92..94,
+                            posonlyargs: [],
+                            args: [],
+                            vararg: None,
+                            kwonlyargs: [],
+                            kwarg: None,
+                        },
+                        returns: None,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 100..103,
+                                    value: EllipsisLiteral(
+                                        EllipsisLiteralExpr {
+                                            range: 100..103,
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ),
+            ],
+        },
+    ),
+    parse_errors: [],
+}

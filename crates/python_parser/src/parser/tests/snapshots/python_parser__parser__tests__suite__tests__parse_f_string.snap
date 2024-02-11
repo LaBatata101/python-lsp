@@ -1,0 +1,36 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    [
+        Expr(
+            ExprStmt {
+                range: 0..14,
+                value: FString(
+                    FStringExpr {
+                        range: 0..14,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 0..14,
+                                        elements: [
+                                            Literal(
+                                                FStringLiteralElement {
+                                                    range: 2..13,
+                                                    value: "Hello world",
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

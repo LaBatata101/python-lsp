@@ -1,0 +1,30 @@
+---
+source: crates/python_parser/src/parser/tests/context.rs
+expression: parse_ast
+---
+(
+    [
+        AugAssign(
+            AugAssignStmt {
+                range: 0..6,
+                target: Name(
+                    NameExpr {
+                        range: 0..1,
+                        id: "x",
+                        ctx: Store,
+                    },
+                ),
+                op: Add,
+                value: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 5..6,
+                        value: Int(
+                            1,
+                        ),
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

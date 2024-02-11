@@ -1,0 +1,948 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    [
+        Expr(
+            ExprStmt {
+                range: 0..9,
+                value: FString(
+                    FStringExpr {
+                        range: 0..9,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 0..9,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 2..8,
+                                                    expression: StringLiteral(
+                                                        StringLiteralExpr {
+                                                            range: 3..7,
+                                                            value: StringLiteralValue {
+                                                                inner: Single(
+                                                                    StringLiteral {
+                                                                        range: 3..7,
+                                                                        value: " f",
+                                                                        unicode: false,
+                                                                    },
+                                                                ),
+                                                            },
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: None,
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 10..20,
+                value: FString(
+                    FStringExpr {
+                        range: 10..20,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 10..20,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 12..19,
+                                                    expression: Name(
+                                                        NameExpr {
+                                                            range: 13..16,
+                                                            id: "foo",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: Str,
+                                                    format_spec: None,
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 21..28,
+                value: FString(
+                    FStringExpr {
+                        range: 21..28,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 21..28,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 23..27,
+                                                    expression: Tuple(
+                                                        TupleExpr {
+                                                            range: 24..26,
+                                                            elts: [
+                                                                NumberLiteral(
+                                                                    NumberLiteralExpr {
+                                                                        range: 24..25,
+                                                                        value: Int(
+                                                                            3,
+                                                                        ),
+                                                                    },
+                                                                ),
+                                                            ],
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: None,
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 29..39,
+                value: FString(
+                    FStringExpr {
+                        range: 29..39,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 29..39,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 31..38,
+                                                    expression: Compare(
+                                                        CompareExpr {
+                                                            range: 32..36,
+                                                            left: NumberLiteral(
+                                                                NumberLiteralExpr {
+                                                                    range: 32..33,
+                                                                    value: Int(
+                                                                        3,
+                                                                    ),
+                                                                },
+                                                            ),
+                                                            ops: [
+                                                                NotEq,
+                                                            ],
+                                                            comparators: [
+                                                                NumberLiteral(
+                                                                    NumberLiteralExpr {
+                                                                        range: 35..36,
+                                                                        value: Int(
+                                                                            4,
+                                                                        ),
+                                                                    },
+                                                                ),
+                                                            ],
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: Some(
+                                                        FStringFormatSpec {
+                                                            range: 37..37,
+                                                            elements: [],
+                                                        },
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 40..55,
+                value: FString(
+                    FStringExpr {
+                        range: 40..55,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 40..55,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 42..54,
+                                                    expression: NumberLiteral(
+                                                        NumberLiteralExpr {
+                                                            range: 43..44,
+                                                            value: Int(
+                                                                3,
+                                                            ),
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: Some(
+                                                        FStringFormatSpec {
+                                                            range: 45..53,
+                                                            elements: [
+                                                                Expression(
+                                                                    FStringExpressionElement {
+                                                                        range: 45..50,
+                                                                        expression: StringLiteral(
+                                                                            StringLiteralExpr {
+                                                                                range: 46..49,
+                                                                                value: StringLiteralValue {
+                                                                                    inner: Single(
+                                                                                        StringLiteral {
+                                                                                            range: 46..49,
+                                                                                            value: "}",
+                                                                                            unicode: false,
+                                                                                        },
+                                                                                    ),
+                                                                                },
+                                                                            },
+                                                                        ),
+                                                                        debug_text: None,
+                                                                        conversion: None,
+                                                                        format_spec: None,
+                                                                    },
+                                                                ),
+                                                                Literal(
+                                                                    FStringLiteralElement {
+                                                                        range: 50..53,
+                                                                        value: ">10",
+                                                                    },
+                                                                ),
+                                                            ],
+                                                        },
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 56..71,
+                value: FString(
+                    FStringExpr {
+                        range: 56..71,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 56..71,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 58..70,
+                                                    expression: NumberLiteral(
+                                                        NumberLiteralExpr {
+                                                            range: 59..60,
+                                                            value: Int(
+                                                                3,
+                                                            ),
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: Some(
+                                                        FStringFormatSpec {
+                                                            range: 61..69,
+                                                            elements: [
+                                                                Expression(
+                                                                    FStringExpressionElement {
+                                                                        range: 61..66,
+                                                                        expression: StringLiteral(
+                                                                            StringLiteralExpr {
+                                                                                range: 62..65,
+                                                                                value: StringLiteralValue {
+                                                                                    inner: Single(
+                                                                                        StringLiteral {
+                                                                                            range: 62..65,
+                                                                                            value: "{",
+                                                                                            unicode: false,
+                                                                                        },
+                                                                                    ),
+                                                                                },
+                                                                            },
+                                                                        ),
+                                                                        debug_text: None,
+                                                                        conversion: None,
+                                                                        format_spec: None,
+                                                                    },
+                                                                ),
+                                                                Literal(
+                                                                    FStringLiteralElement {
+                                                                        range: 66..69,
+                                                                        value: ">10",
+                                                                    },
+                                                                ),
+                                                            ],
+                                                        },
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 72..86,
+                value: FString(
+                    FStringExpr {
+                        range: 72..86,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 72..86,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 74..85,
+                                                    expression: Name(
+                                                        NameExpr {
+                                                            range: 77..80,
+                                                            id: "foo",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: Some(
+                                                        DebugText {
+                                                            leading: "  ",
+                                                            trailing: " =  ",
+                                                        },
+                                                    ),
+                                                    conversion: None,
+                                                    format_spec: None,
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 87..107,
+                value: FString(
+                    FStringExpr {
+                        range: 87..107,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 87..107,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 89..106,
+                                                    expression: Name(
+                                                        NameExpr {
+                                                            range: 92..95,
+                                                            id: "foo",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: Some(
+                                                        DebugText {
+                                                            leading: "  ",
+                                                            trailing: " =  ",
+                                                        },
+                                                    ),
+                                                    conversion: None,
+                                                    format_spec: Some(
+                                                        FStringFormatSpec {
+                                                            range: 100..105,
+                                                            elements: [
+                                                                Literal(
+                                                                    FStringLiteralElement {
+                                                                        range: 100..105,
+                                                                        value: ".3f  ",
+                                                                    },
+                                                                ),
+                                                            ],
+                                                        },
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 108..126,
+                value: FString(
+                    FStringExpr {
+                        range: 108..126,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 108..126,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 110..125,
+                                                    expression: Name(
+                                                        NameExpr {
+                                                            range: 113..116,
+                                                            id: "foo",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: Some(
+                                                        DebugText {
+                                                            leading: "  ",
+                                                            trailing: " =  ",
+                                                        },
+                                                    ),
+                                                    conversion: Str,
+                                                    format_spec: None,
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 127..143,
+                value: FString(
+                    FStringExpr {
+                        range: 127..143,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 127..143,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 129..142,
+                                                    expression: Tuple(
+                                                        TupleExpr {
+                                                            range: 132..136,
+                                                            elts: [
+                                                                NumberLiteral(
+                                                                    NumberLiteralExpr {
+                                                                        range: 132..133,
+                                                                        value: Int(
+                                                                            1,
+                                                                        ),
+                                                                    },
+                                                                ),
+                                                                NumberLiteral(
+                                                                    NumberLiteralExpr {
+                                                                        range: 135..136,
+                                                                        value: Int(
+                                                                            2,
+                                                                        ),
+                                                                    },
+                                                                ),
+                                                            ],
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: Some(
+                                                        DebugText {
+                                                            leading: "  ",
+                                                            trailing: "  =  ",
+                                                        },
+                                                    ),
+                                                    conversion: None,
+                                                    format_spec: None,
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 144..170,
+                value: FString(
+                    FStringExpr {
+                        range: 144..170,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 144..170,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 146..169,
+                                                    expression: FString(
+                                                        FStringExpr {
+                                                            range: 147..163,
+                                                            value: FStringValue {
+                                                                inner: Single(
+                                                                    FString(
+                                                                        FString {
+                                                                            range: 147..163,
+                                                                            elements: [
+                                                                                Expression(
+                                                                                    FStringExpressionElement {
+                                                                                        range: 149..162,
+                                                                                        expression: NumberLiteral(
+                                                                                            NumberLiteralExpr {
+                                                                                                range: 150..156,
+                                                                                                value: Float(
+                                                                                                    3.1415,
+                                                                                                ),
+                                                                                            },
+                                                                                        ),
+                                                                                        debug_text: Some(
+                                                                                            DebugText {
+                                                                                                leading: "",
+                                                                                                trailing: "=",
+                                                                                            },
+                                                                                        ),
+                                                                                        conversion: None,
+                                                                                        format_spec: Some(
+                                                                                            FStringFormatSpec {
+                                                                                                range: 158..161,
+                                                                                                elements: [
+                                                                                                    Literal(
+                                                                                                        FStringLiteralElement {
+                                                                                                            range: 158..161,
+                                                                                                            value: ".1f",
+                                                                                                        },
+                                                                                                    ),
+                                                                                                ],
+                                                                                            },
+                                                                                        ),
+                                                                                    },
+                                                                                ),
+                                                                            ],
+                                                                        },
+                                                                    ),
+                                                                ),
+                                                            },
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: Some(
+                                                        FStringFormatSpec {
+                                                            range: 164..168,
+                                                            elements: [
+                                                                Literal(
+                                                                    FStringLiteralElement {
+                                                                        range: 164..168,
+                                                                        value: "*^20",
+                                                                    },
+                                                                ),
+                                                            ],
+                                                        },
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 172..206,
+                value: Dict(
+                    DictExpr {
+                        range: 172..206,
+                        keys: [
+                            Some(
+                                FString(
+                                    FStringExpr {
+                                        range: 173..201,
+                                        value: FStringValue {
+                                            inner: Concatenated(
+                                                [
+                                                    Literal(
+                                                        StringLiteral {
+                                                            range: 173..179,
+                                                            value: "foo ",
+                                                            unicode: false,
+                                                        },
+                                                    ),
+                                                    FString(
+                                                        FString {
+                                                            range: 180..195,
+                                                            elements: [
+                                                                Literal(
+                                                                    FStringLiteralElement {
+                                                                        range: 182..186,
+                                                                        value: "bar ",
+                                                                    },
+                                                                ),
+                                                                Expression(
+                                                                    FStringExpressionElement {
+                                                                        range: 186..193,
+                                                                        expression: BinOp(
+                                                                            BinOpExpr {
+                                                                                range: 187..192,
+                                                                                left: Name(
+                                                                                    NameExpr {
+                                                                                        range: 187..188,
+                                                                                        id: "x",
+                                                                                        ctx: Load,
+                                                                                    },
+                                                                                ),
+                                                                                op: Add,
+                                                                                right: Name(
+                                                                                    NameExpr {
+                                                                                        range: 191..192,
+                                                                                        id: "y",
+                                                                                        ctx: Load,
+                                                                                    },
+                                                                                ),
+                                                                            },
+                                                                        ),
+                                                                        debug_text: None,
+                                                                        conversion: None,
+                                                                        format_spec: None,
+                                                                    },
+                                                                ),
+                                                                Literal(
+                                                                    FStringLiteralElement {
+                                                                        range: 193..194,
+                                                                        value: " ",
+                                                                    },
+                                                                ),
+                                                            ],
+                                                        },
+                                                    ),
+                                                    Literal(
+                                                        StringLiteral {
+                                                            range: 196..201,
+                                                            value: "baz",
+                                                            unicode: false,
+                                                        },
+                                                    ),
+                                                ],
+                                            ),
+                                        },
+                                    },
+                                ),
+                            ),
+                        ],
+                        values: [
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 203..205,
+                                    value: Int(
+                                        10,
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ),
+            },
+        ),
+        Match(
+            MatchStmt {
+                range: 207..298,
+                subject: Name(
+                    NameExpr {
+                        range: 213..216,
+                        id: "foo",
+                        ctx: Load,
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 222..246,
+                        pattern: MatchValue(
+                            PatternMatchValue {
+                                range: 227..232,
+                                value: StringLiteral(
+                                    StringLiteralExpr {
+                                        range: 227..232,
+                                        value: StringLiteralValue {
+                                            inner: Single(
+                                                StringLiteral {
+                                                    range: 227..232,
+                                                    value: "one",
+                                                    unicode: false,
+                                                },
+                                            ),
+                                        },
+                                    },
+                                ),
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Pass(
+                                PassStmt {
+                                    range: 242..246,
+                                },
+                            ),
+                        ],
+                    },
+                    MatchCase {
+                        range: 251..298,
+                        pattern: MatchValue(
+                            PatternMatchValue {
+                                range: 256..284,
+                                value: StringLiteral(
+                                    StringLiteralExpr {
+                                        range: 256..284,
+                                        value: StringLiteralValue {
+                                            inner: Concatenated(
+                                                ConcatenatedStringLiteral {
+                                                    strings: [
+                                                        StringLiteral {
+                                                            range: 256..269,
+                                                            value: "implicitly ",
+                                                            unicode: false,
+                                                        },
+                                                        StringLiteral {
+                                                            range: 270..284,
+                                                            value: "concatenated",
+                                                            unicode: false,
+                                                        },
+                                                    ],
+                                                    value: "implicitly concatenated",
+                                                },
+                                            ),
+                                        },
+                                    },
+                                ),
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Pass(
+                                PassStmt {
+                                    range: 294..298,
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 300..317,
+                value: FString(
+                    FStringExpr {
+                        range: 300..317,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 300..317,
+                                        elements: [
+                                            Literal(
+                                                FStringLiteralElement {
+                                                    range: 302..303,
+                                                    value: "\\",
+                                                },
+                                            ),
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 303..308,
+                                                    expression: Name(
+                                                        NameExpr {
+                                                            range: 304..307,
+                                                            id: "foo",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: None,
+                                                },
+                                            ),
+                                            Literal(
+                                                FStringLiteralElement {
+                                                    range: 308..309,
+                                                    value: "\\",
+                                                },
+                                            ),
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 309..316,
+                                                    expression: Name(
+                                                        NameExpr {
+                                                            range: 310..313,
+                                                            id: "bar",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: Some(
+                                                        FStringFormatSpec {
+                                                            range: 314..315,
+                                                            elements: [
+                                                                Literal(
+                                                                    FStringLiteralElement {
+                                                                        range: 314..315,
+                                                                        value: "\\",
+                                                                    },
+                                                                ),
+                                                            ],
+                                                        },
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 318..332,
+                value: FString(
+                    FStringExpr {
+                        range: 318..332,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 318..332,
+                                        elements: [
+                                            Literal(
+                                                FStringLiteralElement {
+                                                    range: 320..331,
+                                                    value: "\\{foo\\}",
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+        Expr(
+            ExprStmt {
+                range: 333..373,
+                value: FString(
+                    FStringExpr {
+                        range: 333..373,
+                        value: FStringValue {
+                            inner: Single(
+                                FString(
+                                    FString {
+                                        range: 333..373,
+                                        elements: [
+                                            Expression(
+                                                FStringExpressionElement {
+                                                    range: 337..370,
+                                                    expression: Name(
+                                                        NameExpr {
+                                                            range: 343..346,
+                                                            id: "foo",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                    debug_text: None,
+                                                    conversion: None,
+                                                    format_spec: Some(
+                                                        FStringFormatSpec {
+                                                            range: 347..369,
+                                                            elements: [
+                                                                Literal(
+                                                                    FStringLiteralElement {
+                                                                        range: 347..369,
+                                                                        value: "x\n        y\n        z\n",
+                                                                    },
+                                                                ),
+                                                            ],
+                                                        },
+                                                    ),
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ),
+                        },
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

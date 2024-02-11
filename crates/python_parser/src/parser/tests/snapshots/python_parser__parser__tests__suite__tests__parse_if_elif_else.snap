@@ -1,0 +1,86 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    [
+        If(
+            IfStmt {
+                range: 0..28,
+                test: NumberLiteral(
+                    NumberLiteralExpr {
+                        range: 3..4,
+                        value: Int(
+                            1,
+                        ),
+                    },
+                ),
+                body: [
+                    Expr(
+                        ExprStmt {
+                            range: 6..8,
+                            value: NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 6..8,
+                                    value: Int(
+                                        10,
+                                    ),
+                                },
+                            ),
+                        },
+                    ),
+                ],
+                elif_else_clauses: [
+                    ElifElseClause {
+                        range: 9..19,
+                        test: Some(
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 14..15,
+                                    value: Int(
+                                        2,
+                                    ),
+                                },
+                            ),
+                        ),
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 17..19,
+                                    value: NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 17..19,
+                                            value: Int(
+                                                20,
+                                            ),
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                    ElifElseClause {
+                        range: 20..28,
+                        test: None,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 26..28,
+                                    value: NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 26..28,
+                                            value: Int(
+                                                30,
+                                            ),
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+    ],
+    [],
+)

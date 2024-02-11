@@ -1,0 +1,42 @@
+---
+source: crates/ruff_python_parser/src/string.rs
+expression: parse_ast
+---
+[
+    Expr(
+        StmtExpr {
+            range: 0..17,
+            value: FString(
+                ExprFString {
+                    range: 0..17,
+                    value: FStringValue {
+                        inner: Concatenated(
+                            [
+                                Literal(
+                                    StringLiteral {
+                                        range: 0..8,
+                                        value: "Hello ",
+                                        unicode: false,
+                                    },
+                                ),
+                                FString(
+                                    FString {
+                                        range: 9..17,
+                                        elements: [
+                                            Literal(
+                                                FStringLiteralElement {
+                                                    range: 11..16,
+                                                    value: "world",
+                                                },
+                                            ),
+                                        ],
+                                    },
+                                ),
+                            ],
+                        ),
+                    },
+                },
+            ),
+        },
+    ),
+]

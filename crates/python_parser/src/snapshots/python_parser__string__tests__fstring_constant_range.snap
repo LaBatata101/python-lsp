@@ -1,0 +1,75 @@
+---
+source: crates/python_parser/src/string.rs
+expression: parse_ast
+---
+[
+    Expr(
+        ExprStmt {
+            range: 0..22,
+            value: FString(
+                FStringExpr {
+                    range: 0..22,
+                    value: FStringValue {
+                        inner: Single(
+                            FString(
+                                FString {
+                                    range: 0..22,
+                                    elements: [
+                                        Literal(
+                                            FStringLiteralElement {
+                                                range: 2..5,
+                                                value: "aaa",
+                                            },
+                                        ),
+                                        Expression(
+                                            FStringExpressionElement {
+                                                range: 5..10,
+                                                expression: Name(
+                                                    NameExpr {
+                                                        range: 6..9,
+                                                        id: "bbb",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                debug_text: None,
+                                                conversion: None,
+                                                format_spec: None,
+                                            },
+                                        ),
+                                        Literal(
+                                            FStringLiteralElement {
+                                                range: 10..13,
+                                                value: "ccc",
+                                            },
+                                        ),
+                                        Expression(
+                                            FStringExpressionElement {
+                                                range: 13..18,
+                                                expression: Name(
+                                                    NameExpr {
+                                                        range: 14..17,
+                                                        id: "ddd",
+                                                        ctx: Load,
+                                                    },
+                                                ),
+                                                debug_text: None,
+                                                conversion: None,
+                                                format_spec: None,
+                                            },
+                                        ),
+                                        Literal(
+                                            FStringLiteralElement {
+                                                range: 18..21,
+                                                value: "eee",
+                                            },
+                                        ),
+                                    ],
+                                },
+                            ),
+                        ),
+                    },
+                },
+            ),
+        },
+    ),
+]

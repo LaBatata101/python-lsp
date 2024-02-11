@@ -1,0 +1,68 @@
+---
+source: crates/python_parser/src/parser/tests/context.rs
+expression: parse_ast
+---
+(
+    [
+        Assign(
+            AssignStmt {
+                range: 0..16,
+                targets: [
+                    Subscript(
+                        SubscriptExpr {
+                            range: 0..4,
+                            value: Name(
+                                NameExpr {
+                                    range: 0..1,
+                                    id: "x",
+                                    ctx: Load,
+                                },
+                            ),
+                            slice: Name(
+                                NameExpr {
+                                    range: 2..3,
+                                    id: "y",
+                                    ctx: Load,
+                                },
+                            ),
+                            ctx: Store,
+                        },
+                    ),
+                ],
+                value: Tuple(
+                    TupleExpr {
+                        range: 7..16,
+                        elts: [
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 8..9,
+                                    value: Int(
+                                        1,
+                                    ),
+                                },
+                            ),
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 11..12,
+                                    value: Int(
+                                        2,
+                                    ),
+                                },
+                            ),
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 14..15,
+                                    value: Int(
+                                        3,
+                                    ),
+                                },
+                            ),
+                        ],
+                        ctx: Load,
+                    },
+                ),
+            },
+        ),
+    ],
+    [],
+)

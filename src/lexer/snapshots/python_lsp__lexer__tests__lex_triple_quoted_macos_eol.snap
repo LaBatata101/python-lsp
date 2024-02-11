@@ -1,8 +1,0 @@
----
-source: src/lexer/mod.rs
-expression: "LexerDebug::new(&lexer, &source)"
----
-[
-    "\"\"\"\r test string\r \"\"\"" String { kind: String, is_triple_quote: true } 0..21,
-    "" NewLine 21..21,
-]

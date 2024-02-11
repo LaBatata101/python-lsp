@@ -1,0 +1,608 @@
+---
+source: crates/python_parser/src/parser/tests/suite.rs
+expression: parse_ast
+---
+(
+    [
+        Match(
+            MatchStmt {
+                range: 1..73,
+                subject: Dict(
+                    DictExpr {
+                        range: 7..18,
+                        keys: [
+                            Some(
+                                StringLiteral(
+                                    StringLiteralExpr {
+                                        range: 8..14,
+                                        value: StringLiteralValue {
+                                            inner: Single(
+                                                StringLiteral {
+                                                    range: 8..14,
+                                                    value: "test",
+                                                    unicode: false,
+                                                },
+                                            ),
+                                        },
+                                    },
+                                ),
+                            ),
+                        ],
+                        values: [
+                            NumberLiteral(
+                                NumberLiteralExpr {
+                                    range: 16..17,
+                                    value: Int(
+                                        1,
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 24..73,
+                        pattern: MatchMapping(
+                            PatternMatchMapping {
+                                range: 29..52,
+                                keys: [],
+                                patterns: [],
+                                rest: Some(
+                                    Identifier {
+                                        id: "rest",
+                                        range: 41..45,
+                                    },
+                                ),
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 62..73,
+                                    value: Call(
+                                        CallExpr {
+                                            range: 62..73,
+                                            func: Name(
+                                                NameExpr {
+                                                    range: 62..67,
+                                                    id: "print",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                            arguments: Arguments {
+                                                range: 67..73,
+                                                args: [
+                                                    Name(
+                                                        NameExpr {
+                                                            range: 68..72,
+                                                            id: "rest",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                ],
+                                                keywords: [],
+                                            },
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+        Match(
+            MatchStmt {
+                range: 74..177,
+                subject: Dict(
+                    DictExpr {
+                        range: 80..97,
+                        keys: [
+                            Some(
+                                StringLiteral(
+                                    StringLiteralExpr {
+                                        range: 81..88,
+                                        value: StringLiteralValue {
+                                            inner: Single(
+                                                StringLiteral {
+                                                    range: 81..88,
+                                                    value: "label",
+                                                    unicode: false,
+                                                },
+                                            ),
+                                        },
+                                    },
+                                ),
+                            ),
+                        ],
+                        values: [
+                            StringLiteral(
+                                StringLiteralExpr {
+                                    range: 90..96,
+                                    value: StringLiteralValue {
+                                        inner: Single(
+                                            StringLiteral {
+                                                range: 90..96,
+                                                value: "test",
+                                                unicode: false,
+                                            },
+                                        ),
+                                    },
+                                },
+                            ),
+                        ],
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 103..177,
+                        pattern: MatchMapping(
+                            PatternMatchMapping {
+                                range: 108..155,
+                                keys: [
+                                    StringLiteral(
+                                        StringLiteralExpr {
+                                            range: 118..125,
+                                            value: StringLiteralValue {
+                                                inner: Single(
+                                                    StringLiteral {
+                                                        range: 118..125,
+                                                        value: "label",
+                                                        unicode: false,
+                                                    },
+                                                ),
+                                            },
+                                        },
+                                    ),
+                                ],
+                                patterns: [
+                                    MatchAs(
+                                        PatternMatchAs {
+                                            range: 127..148,
+                                            pattern: Some(
+                                                MatchOr(
+                                                    PatternMatchOr {
+                                                        range: 127..139,
+                                                        patterns: [
+                                                            MatchClass(
+                                                                PatternMatchClass {
+                                                                    range: 127..132,
+                                                                    cls: Name(
+                                                                        NameExpr {
+                                                                            range: 127..130,
+                                                                            id: "str",
+                                                                            ctx: Load,
+                                                                        },
+                                                                    ),
+                                                                    arguments: PatternArguments {
+                                                                        range: 130..132,
+                                                                        patterns: [],
+                                                                        keywords: [],
+                                                                    },
+                                                                },
+                                                            ),
+                                                            MatchSingleton(
+                                                                PatternMatchSingleton {
+                                                                    range: 135..139,
+                                                                    value: None,
+                                                                },
+                                                            ),
+                                                        ],
+                                                    },
+                                                ),
+                                            ),
+                                            name: Some(
+                                                Identifier {
+                                                    id: "label",
+                                                    range: 143..148,
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                ],
+                                rest: None,
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Expr(
+                                ExprStmt {
+                                    range: 165..177,
+                                    value: Call(
+                                        CallExpr {
+                                            range: 165..177,
+                                            func: Name(
+                                                NameExpr {
+                                                    range: 165..170,
+                                                    id: "print",
+                                                    ctx: Load,
+                                                },
+                                            ),
+                                            arguments: Arguments {
+                                                range: 170..177,
+                                                args: [
+                                                    Name(
+                                                        NameExpr {
+                                                            range: 171..176,
+                                                            id: "label",
+                                                            ctx: Load,
+                                                        },
+                                                    ),
+                                                ],
+                                                keywords: [],
+                                            },
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+        Match(
+            MatchStmt {
+                range: 178..218,
+                subject: Name(
+                    NameExpr {
+                        range: 184..185,
+                        id: "x",
+                        ctx: Load,
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 191..218,
+                        pattern: MatchSequence(
+                            PatternMatchSequence {
+                                range: 196..203,
+                                patterns: [
+                                    MatchValue(
+                                        PatternMatchValue {
+                                            range: 197..198,
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 197..198,
+                                                    value: Int(
+                                                        0,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                    MatchValue(
+                                        PatternMatchValue {
+                                            range: 200..201,
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 200..201,
+                                                    value: Int(
+                                                        1,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                ],
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Assign(
+                                AssignStmt {
+                                    range: 213..218,
+                                    targets: [
+                                        Name(
+                                            NameExpr {
+                                                range: 213..214,
+                                                id: "y",
+                                                ctx: Store,
+                                            },
+                                        ),
+                                    ],
+                                    value: NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 217..218,
+                                            value: Int(
+                                                0,
+                                            ),
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+        Match(
+            MatchStmt {
+                range: 219..259,
+                subject: Name(
+                    NameExpr {
+                        range: 225..226,
+                        id: "x",
+                        ctx: Load,
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 232..259,
+                        pattern: MatchSequence(
+                            PatternMatchSequence {
+                                range: 237..244,
+                                patterns: [
+                                    MatchValue(
+                                        PatternMatchValue {
+                                            range: 238..239,
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 238..239,
+                                                    value: Int(
+                                                        0,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                    MatchValue(
+                                        PatternMatchValue {
+                                            range: 241..242,
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 241..242,
+                                                    value: Int(
+                                                        1,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                ],
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Assign(
+                                AssignStmt {
+                                    range: 254..259,
+                                    targets: [
+                                        Name(
+                                            NameExpr {
+                                                range: 254..255,
+                                                id: "y",
+                                                ctx: Store,
+                                            },
+                                        ),
+                                    ],
+                                    value: NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 258..259,
+                                            value: Int(
+                                                0,
+                                            ),
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+        Match(
+            MatchStmt {
+                range: 260..297,
+                subject: Name(
+                    NameExpr {
+                        range: 266..267,
+                        id: "x",
+                        ctx: Load,
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 273..297,
+                        pattern: MatchSequence(
+                            PatternMatchSequence {
+                                range: 278..282,
+                                patterns: [
+                                    MatchValue(
+                                        PatternMatchValue {
+                                            range: 279..280,
+                                            value: NumberLiteral(
+                                                NumberLiteralExpr {
+                                                    range: 279..280,
+                                                    value: Int(
+                                                        0,
+                                                    ),
+                                                },
+                                            ),
+                                        },
+                                    ),
+                                ],
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Assign(
+                                AssignStmt {
+                                    range: 292..297,
+                                    targets: [
+                                        Name(
+                                            NameExpr {
+                                                range: 292..293,
+                                                id: "y",
+                                                ctx: Store,
+                                            },
+                                        ),
+                                    ],
+                                    value: NumberLiteral(
+                                        NumberLiteralExpr {
+                                            range: 296..297,
+                                            value: Int(
+                                                0,
+                                            ),
+                                        },
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+        Match(
+            MatchStmt {
+                range: 298..332,
+                subject: Tuple(
+                    TupleExpr {
+                        range: 304..306,
+                        elts: [
+                            Name(
+                                NameExpr {
+                                    range: 304..305,
+                                    id: "x",
+                                    ctx: Load,
+                                },
+                            ),
+                        ],
+                        ctx: Load,
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 312..332,
+                        pattern: MatchAs(
+                            PatternMatchAs {
+                                range: 317..318,
+                                pattern: None,
+                                name: Some(
+                                    Identifier {
+                                        id: "z",
+                                        range: 317..318,
+                                    },
+                                ),
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Pass(
+                                PassStmt {
+                                    range: 328..332,
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+        Match(
+            MatchStmt {
+                range: 333..369,
+                subject: Tuple(
+                    TupleExpr {
+                        range: 339..343,
+                        elts: [
+                            Name(
+                                NameExpr {
+                                    range: 339..340,
+                                    id: "x",
+                                    ctx: Load,
+                                },
+                            ),
+                            Name(
+                                NameExpr {
+                                    range: 342..343,
+                                    id: "y",
+                                    ctx: Load,
+                                },
+                            ),
+                        ],
+                        ctx: Load,
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 349..369,
+                        pattern: MatchAs(
+                            PatternMatchAs {
+                                range: 354..355,
+                                pattern: None,
+                                name: Some(
+                                    Identifier {
+                                        id: "z",
+                                        range: 354..355,
+                                    },
+                                ),
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Pass(
+                                PassStmt {
+                                    range: 365..369,
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+        Match(
+            MatchStmt {
+                range: 370..407,
+                subject: Tuple(
+                    TupleExpr {
+                        range: 376..381,
+                        elts: [
+                            Name(
+                                NameExpr {
+                                    range: 376..377,
+                                    id: "x",
+                                    ctx: Load,
+                                },
+                            ),
+                            Name(
+                                NameExpr {
+                                    range: 379..380,
+                                    id: "y",
+                                    ctx: Load,
+                                },
+                            ),
+                        ],
+                        ctx: Load,
+                    },
+                ),
+                cases: [
+                    MatchCase {
+                        range: 387..407,
+                        pattern: MatchAs(
+                            PatternMatchAs {
+                                range: 392..393,
+                                pattern: None,
+                                name: Some(
+                                    Identifier {
+                                        id: "z",
+                                        range: 392..393,
+                                    },
+                                ),
+                            },
+                        ),
+                        guard: None,
+                        body: [
+                            Pass(
+                                PassStmt {
+                                    range: 403..407,
+                                },
+                            ),
+                        ],
+                    },
+                ],
+            },
+        ),
+    ],
+    [],
+)
